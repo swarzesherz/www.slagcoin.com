@@ -1,0 +1,178 @@
+<html>
+
+<head>
+
+<link rel="SHORTCUT ICON" href="http://www.slagcoin.com/joyicon.ico" />
+
+<title>Joystick Controller - Basic Parts</title>
+
+<!-- Joystick controller pages authored by slagcoin. -->
+<meta name="author" content="slagcoin" />
+<meta name="keywords" content="joystick controller, stick, stik, joystick, joysticks, controller, arcade controller, arcade stick, arcade, custom joystick, custom controller, custom stick, custom, homemade controller, homemade joystick, homemade stick, built, control, controls, arcade controls, arcade button, arcade buttons, button, buttons, arcade pushbutton, arcade pushbuttons, pushbuttons, pushbutton, happ, sanwa, seimitsu, competition, jlf, jlw, ls-32, ls-33, ls-40, ls-55, pcb, American, Japanese, part, parts, microswitch" />
+<meta name="description" content="Site that gives information on arcade parts and home joystick controllers." />
+<meta name="revised" content="February 24, 2009" />
+
+</head>
+
+<!-- Page style; background color has about 50% less of the darkness of the corresponding navigation icon. -->
+<body style="font-family:verdana,helvetica,arial,georgia,times new roman,new courier;font-size:10pt;background-color:#FFCC99">
+
+<!-- Navigation images copied to each section because iframes are a pain.-->
+<p>
+<a href="introduction.html"><img style="border-width:1px;border-color:black" src="nav/intro.png" width="100" height="100" alt="Introduction" /></a><a href="pad.html"><img style="border-width:1px;border-color:black" src="nav/pad.png" width="100" height="100" alt="The Joystick Vs The Control Pad" /></a><a href="basic.html"><img style="border-width:1px;border-color:black" src="nav/basic.png" width="100" height="100" alt="Basic Parts" /></a><a href="joystick_components.html"><img style="border-width:1px;border-color:black" src="nav/component.png" width="100" height="100" alt="Joystick Components" /></a><a href="attributes_brands.html"><img style="border-width:1px;border-color:black" src="nav/joys.png" width="100" height="100" alt="Joystick and Button Attributes and Brand Parts" /></a><a href="restrictors.html"><img style="border-width:1px;border-color:black" src="nav/gate.png" width="100" height="100" alt="Joystick Engagements and Restrictors" /></a><a href="layout.html"><img style="border-width:1px;border-color:black" src="nav/layout.png" width="100" height="100" alt="Panel Layout" /></a><a href="tools.html"><img style="border-width:1px;border-color:black" src="nav/tool.png" width="100" height="100" alt="Tools and Other Parts" /></a><a href="mounting_layering.html"><img style="border-width:1px;border-color:black" src="nav/layer.png" width="100" height="100" alt="Panel Mounting and Layering" /></a><a href="box.html"><img style="border-width:1px;border-color:black" src="nav/box.png" width="100" height="100" alt="Controller Box" /></a><a href="pcb_wiring.html"><img style="border-width:1px;border-color:black" src="nav/pcb.png" width="100" height="100" alt="PCB and Wiring" /></a><a href="decoration.html"><img style="border-width:1px;border-color:black" src="nav/decor.png" width="100" height="100" alt="Material and Decoration" /></a><a href="example1.html"><img style="border-width:1px;border-color:black" src="nav/one.png" width="100" height="100" alt="Example Ingredients" /></a><a href="example2.html"><img style="border-width:1px;border-color:black" src="nav/two.png" width="100" height="100" alt="Example Detailed Controller Build" /></a><a href="example3.html"><img style="border-width:1px;border-color:black" src="nav/three.png" width="100" height="100" alt="Example Summarized Controller Builds" /></a><a href="brand_controllers.html"><img style="border-width:1px;border-color:black" src="nav/cont.png" width="100" height="100" alt="Brand and Custom Arcade Controller Makers" /></a><a href="references.html"><img style="border-width:1px;border-color:black" src="nav/misc.png" width="100" height="100" alt="Links and References" /></a><a href="../joystick.html"><img style="border-width:1px;border-color:black" src="nav/home.png" width="100" height="100" alt="Front Page" /></a>
+</p>
+<!-- End copied navigation images. -->
+
+<!-- Table to give page better layout; divided for standard background. -->
+<table border="0" width="800" align="center">
+<div style="background-color:white">
+
+<!-- Top divider sharing color of navigation box. -->
+<div style="border-width:2;border-style:solid;border-color:black;background-color:#FF9900"><p></p></div>
+
+<!-- Margins smaller than the backgrounds for better layout. -->
+<div style="margin-left:25;margin-right:25">
+
+<!-- Navigation box and head title. -->
+<p>
+<img src="nav/basic.png" style="margin-right:30;margin-bottom:30" width="100" height="100" align="left" border="1" />
+<h1 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier">Basic Parts</h1>
+</p>
+
+<a name="***BASIC_PARTS***" />
+
+<p>
+This section summarizes the main components and how they function together in a basic arcade controller.  It is composed of some basic parts not all that complicated.
+</p>
+
+<br /><br />
+
+<div style="font-size:10" align="center">
+<img src="basic/switches.jpg" width="491" height="300" border="0" />
+</div>
+
+<a name="SWITCHES" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Switches</h2>
+
+<p>
+Basically a switch is an on-off device usually working by completing an electrical circuit in one position and cutting it in the other.  A momentary contact switch is one that must be pressed to engage and springs back when released; these are used by simple joysticks and buttons.  A microswitch is a small momentary contact switch requiring little force; the actuation of a standard microswitch uses a small button with a distinct clicking sound (and feel).
+</p>
+
+<p>
+Joystick and button switches have at least two terminals (also called lugs); one attaches to a signal and the other to a ground.  When the switch is pressed, the current of electricity is connected and the attached signal/command is engaged; when it is released, the circuit is cut and the signal is disengaged.  This completed circuit is how the commands of simple joysticks and buttons are activated on a PCB board.  It does not matter where the ground and signal are attached to the switch as long as the appropriate circuit is set for the desired engagement.
+</p>
+
+<p>
+Many microswitches have three terminals, with the third terminal making a completed circuit when the switch is not engaged.  Technically speaking for most microswitches, the L-shaped terminal on the side is the signal terminal, the terminal nearest it is the ground terminal, and the other terminal is an inverse ground terminal.  The inverted terminal is not generally used in controller making.  Some microswitches have the two ground terminals in opposite positions.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/pcbs.jpg" width="391" height="300" border="0" />
+</div>
+
+<a name="PCB" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">PCB</h2>
+
+<p>
+PCB stands for “printed circuit board”.  It is a highway of conductive paths on a nonconductive panel connected to outlets that send and receive electronic commands.  There are many different signals with their corresponding unique paths and usually a single ground (also called a common) that runs throughout the PCB.  When a circuit is completed between the ground and a signal, a part of the processor is activated and its corresponding command is sent.  The various commands are sent through an attached cord or remote to the computer or console.
+</p>
+
+<p>
+The PCB is often called the interface because it is what allows joysticks and buttons to communicate with computers.  PCBs can be extracted from cheap controllers and keyboards, or purchased specially for joystick controllers.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/wires.jpg" width="386" height="300" border="0" />
+</div>
+
+<a name="WIRE" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Wire</h2>
+
+<p>
+Wire is conductive string, generally made of metal, often insulated by a nonconductive cover.  In making a controller, it is used to connect the terminals of switches to the ground and desired signals on a PCB.  At least four wires are also used in the cord for PCBs.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/sticks.jpg" width="406" height="300" border="0" />
+</div>
+
+<a name="JOYSTICK" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Joystick</h2>
+
+<p>
+A joystick is a directional control stick suspended on a pivot.  Most joysticks activate directional commands by pressing a switch placed opposite and below the pivot.  Joysticks indicating varying degrees of each direction (analog) require more complex sensors.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/buttons.jpg" width="421" height="300" border="0" />
+</div>
+
+<a name="BUTTONS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Buttons</h2>
+
+<p>
+A button (also called a “pushbutton” in arcade parts) is an embellished switch giving a simple command.  Most are large and round, attaching to a round hole in a panel.  Some are designed to plunge into an attached standard microswitch, while others have a smaller simple switch set inside them with a pair of terminals sticking out the bottom.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/panel.jpg" width="381" height="300" border="0" />
+</div>
+
+<a name="CONTROL_PANEL" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Control Panel</h2>
+
+<p>
+The control panel is a flat, durable plate into which the directional device and buttons are built.  It is usually made of wood, metal, or plastic, often covered by acrylic glass with images printed on paper sandwiched below it for decoration.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/box.jpg" width="459" height="300" border="0" />
+</div>
+
+<a name="PANEL_SUPPORT" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Panel Support</h2>
+
+<p>
+In most circumstances, a control panel cannot stand on its own.  Some kind of structure needs to suspend it.  By far, the most common way to do this for a controller is with a box, but there are other ways to accomplish this.  A control panel together with a box is called a case.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="basic/together.jpg" width="369" height="300" border="0" />
+</div>
+
+<a name="PUT_TOGETHER" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Put Together</h2>
+
+<p>
+So the workings of a basic joystick controller are as follows:  The joystick and buttons are mounted in a desired layout to a panel which is supported by usually a box.  The joystick and buttons contain switches, one for each button and one for each of the four directions of the joystick, engaged by the movement of those devices.  Each switch is connected to two wires, one to the ground and one to a specific signal.  These wires are connected to a PCB which emits specific commands when a circuit is completed between the ground and the corresponding signal.  The PCB is connected to a cord or remote that sends the commands to a computer or console.
+</p>
+
+</div>
+
+<!-- Bottom divider sharing color of navigation box. -->
+<div style="border-width:2;border-style:solid;border-color:black;background-color:#FF9900"><p></p></div>
+
+<!-- Simple bottom navigation. -->
+</p>
+<a href="joystick_components.html"><img src="nav/next.png" hspace=25 vspace=0 align="right" border="0" alt="Next" /></a>
+<a href="pad.html"><img src="nav/back.png" hspace=25 vspace=0 align="left" border="0" alt="Back" /></a>
+<div style="font-size:10" align="center"><a href="../index.html"><img src="../slagcoin/sc_small.png" align="center" width="64" height="25" border="0" /></a> <br /> &copy 2008-2009 slagcoin</div>
+</p>
+
+<br />
+
+</div>
+
+</table>
+
+</body>
+
+</html>

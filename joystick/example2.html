@@ -1,0 +1,520 @@
+<html>
+
+<head>
+
+<link rel="SHORTCUT ICON" href="http://www.slagcoin.com/joyicon.ico" />
+
+<title>Joystick Controller - Example Detailed Controller Build</title>
+
+<!-- Joystick controller pages authored by slagcoin. -->
+<meta name="author" content="slagcoin" />
+<meta name="keywords" content="joystick controller, stick, stik, joystick, joysticks, controller, arcade controller, arcade stick, arcade, custom joystick, custom controller, custom stick, custom, homemade controller, homemade joystick, homemade stick, built, control, controls, arcade controls, arcade button, arcade buttons, button, buttons, arcade pushbutton, arcade pushbuttons, pushbuttons, pushbutton, happ, sanwa, seimitsu, competition, jlf, jlw, ls-32, ls-33, ls-40, ls-55, pcb, American, Japanese, part, parts, microswitch" />
+<meta name="description" content="Site that gives information on arcade parts and home joystick controllers." />
+<meta name="revised" content="February 24, 2009" />
+
+</head>
+
+<!-- Page style; background color has about 50% less of the darkness of the corresponding navigation icon. -->
+<body style="font-family:verdana,helvetica,arial,georgia,times new roman,new courier;font-size:10pt;background-color:#9999CC">
+
+<!-- Navigation images copied to each section because iframes are a pain.-->
+<p>
+<a href="introduction.html"><img style="border-width:1px;border-color:black" src="nav/intro.png" width="100" height="100" alt="Introduction" /></a><a href="pad.html"><img style="border-width:1px;border-color:black" src="nav/pad.png" width="100" height="100" alt="The Joystick Vs The Control Pad" /></a><a href="basic.html"><img style="border-width:1px;border-color:black" src="nav/basic.png" width="100" height="100" alt="Basic Parts" /></a><a href="joystick_components.html"><img style="border-width:1px;border-color:black" src="nav/component.png" width="100" height="100" alt="Joystick Components" /></a><a href="attributes_brands.html"><img style="border-width:1px;border-color:black" src="nav/joys.png" width="100" height="100" alt="Joystick and Button Attributes and Brand Parts" /></a><a href="restrictors.html"><img style="border-width:1px;border-color:black" src="nav/gate.png" width="100" height="100" alt="Joystick Engagements and Restrictors" /></a><a href="layout.html"><img style="border-width:1px;border-color:black" src="nav/layout.png" width="100" height="100" alt="Panel Layout" /></a><a href="tools.html"><img style="border-width:1px;border-color:black" src="nav/tool.png" width="100" height="100" alt="Tools and Other Parts" /></a><a href="mounting_layering.html"><img style="border-width:1px;border-color:black" src="nav/layer.png" width="100" height="100" alt="Panel Mounting and Layering" /></a><a href="box.html"><img style="border-width:1px;border-color:black" src="nav/box.png" width="100" height="100" alt="Controller Box" /></a><a href="pcb_wiring.html"><img style="border-width:1px;border-color:black" src="nav/pcb.png" width="100" height="100" alt="PCB and Wiring" /></a><a href="decoration.html"><img style="border-width:1px;border-color:black" src="nav/decor.png" width="100" height="100" alt="Material and Decoration" /></a><a href="example1.html"><img style="border-width:1px;border-color:black" src="nav/one.png" width="100" height="100" alt="Example Ingredients" /></a><a href="example2.html"><img style="border-width:1px;border-color:black" src="nav/two.png" width="100" height="100" alt="Example Detailed Controller Build" /></a><a href="example3.html"><img style="border-width:1px;border-color:black" src="nav/three.png" width="100" height="100" alt="Example Summarized Controller Builds" /></a><a href="brand_controllers.html"><img style="border-width:1px;border-color:black" src="nav/cont.png" width="100" height="100" alt="Brand and Custom Arcade Controller Makers" /></a><a href="references.html"><img style="border-width:1px;border-color:black" src="nav/misc.png" width="100" height="100" alt="Links and References" /></a><a href="../joystick.html"><img style="border-width:1px;border-color:black" src="nav/home.png" width="100" height="100" alt="Front Page" /></a>
+</p>
+<!-- End copied navigation images. -->
+
+<!-- Table to give page better layout; divided for standard background. -->
+<table border="0" width="800" align="center">
+<div style="background-color:white">
+
+<!-- Top divider sharing color of navigation box. -->
+<div style="border-width:2;border-style:solid;border-color:black;background-color:#000099"><p></p></div>
+
+<!-- Margins smaller than the backgrounds for better layout. -->
+<div style="margin-left:25;margin-right:25">
+
+<!-- Navigation box and head title. -->
+<p>
+<img src="nav/two.png" style="margin-right:30;margin-bottom:30" width="100" height="100" align="left" border="1" />
+<h1 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier">Example Detailed Controller Build</h1>
+</p>
+
+<a name="***EXAMPLE_DETAILED_CONTROLLER_BUILD***" />
+
+<p>
+This section documents an joystick controller build and goes into great detail about the design and choices made in the process.  It is a fairly comprehensive look at making one.
+</p>
+
+<p>
+Reading through the process is a good way to familiarize yourself with putting a controller together.  Learning details of successes and mistakes can help make a better controller.
+</p>
+
+<p>
+This is an early example of my work, and much better can be done, but this can help in getting the right mindset.
+</p>
+
+<a name="SIMPLE_POPLAR" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:26">Simple Poplar</h2>
+
+<p>
+Completed April 2008
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/simple1.jpg" width="474" height="400" border="0" />
+</div>
+
+<p>
+Part of the goal in making this controller was to use some fairly humble means.  No fancy jigs or power saws.  Far and away, the only expensive piece of equipment was the router and bits I found at good prices.  Another goal was to make an independent box and panel that could easily be augmented or replaced.  The project turned out more difficult than I though because joining and aligning the boxes was not as easy as I thought it would be.  Using smaller blocks in the corner of each inner part of a single box is much easier than this design.
+</p>
+
+<p>
+The devices and wiring:
+<ul>
+<li>1 Seimitsu LS-32 S-Plate (also Sanwa JLF compatible)</li>
+<li>1 Wire Harness</li>
+<li>1 Seimitsu White 35mm Ball Top</li>
+<li>6 Seimitsu White PS-14-GN 30mm Buttons</li>
+<li>4 Seimitsu White PS-14-DN 24mm Buttons</li>
+<li>1 PS1 Extracted Soldered PCB</li>
+<li>~15' 20 AWG Insulated Wire (much cut away)</li>
+<li>1 Project Box 4"x2"x1"</li>
+<li>1 Four-Terminal Strip</li>
+<li>~30 Various Connectors</li>
+</ul>
+</p>
+
+<p>
+The joystick designed here is a 1-3/4 box, two-layer routed panel, poplar controller.
+</p>
+
+<p>
+The basic measurements for the materials:
+<ul>
+<li>1 12" x 8" x 3/4" Wood</li>
+<li>2 12" x 8" x .093" Acrylic Glass</li>
+<li>2 8" x 1-1/2" x 3/4" Wood</li>
+<li>2 8" x 2-1/2" x 3/4" Wood</li>
+<li>1 10-1/2" x 1-1/2" x 3/4" Wood</li>
+<li>2 13-1/2" x 2-1/2" x 3/4" Wood</li>
+</ul>
+</p>
+
+<p>
+The same basic measurements for the materials in approximated centimeters:
+<ul>
+<li>1 30cm x 20cm x 2cm Wood</li>
+<li>2 30cm x 20cm x .25cm Acrylic Glass</li>
+<li>2 20cm x 4cm x 2cm Wood</li>
+<li>2 20cm x 6.5cm x 2cm Wood</li>
+<li>1 26cm x 4cm x 2cm Wood</li>
+<li>2 34cm x 6.5cm x 2cm Wood</li>
+</ul>
+</p>
+
+<p>
+The original purchased materials:
+<ul>
+<li>1 24" x 11-1/4" x 3/4" Poplar (MDF would probably have been better)</li>
+<li>1 24" x 18" x .093" Lexan</li>
+<li>2 24" x 1-1/2" x 3/4" Poplar (1 48" board would have been better)</li>
+<li>2 24" x 2-1/2" x 3/4" Poplar (1 48" board would have been better)</li>
+</ul>
+</p>
+
+<p>
+The wood was purchased from Lowes and the glass from Home Depot, all together about $25 with excess materials leftover at the finish.
+</p>
+
+<a name="CONTROLLER_BOX" />
+
+<h3 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Controller Box</h3>
+
+<div style="font-size:10" align="center">
+<img src="example2/sawing.jpg" width="434" height="300" border="0" />
+</div>
+
+<p>
+To start, the wood was cut for the box to the needed dimensions using a hand saw.  I marked and made the lines for the cuts using a pencil.  I made sure the cuts were straight by clamping another couple boards with good cuts to the board being cut as guides.  I cut with slight excess to avoid short boards that could not be fixed.  The cuts were not entirely perfect, so I sanded the ends against some 60 grit sandpaper resting on a flat piece of scrap wood.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/boards1.jpg" width="327" height="200" border="0" />
+<img src="example2/boards2.jpg" width="307" height="200" border="0" />
+<img src="example2/boards3.jpg" width="302" height="200" border="0" />
+</div>
+
+<p>
+I made sure the boards fit together well; a couple needed a little additional sanding to tweak their size.  I then checked the dimensions of the inside to see if the assumed sizes would fit; they did.  I did the basic cutting for the main part of the panel and the two sheets of acrylic glass.  I used the same guiding techniques on the main panel.
+</p>
+
+<p>
+I marked the acrylic with marker (it has a protective coating that needs to stay until it is completely cut).  I used a metal straight edge and an acrylic cutting knife to cut it starting with low force to establish a groove and then moderate to establish a good groove; I used about 30 runs all together.  I then bent the sheet (far and hard) with the seam going outward until it snapped (and it was loud; maybe should have had ear protection).
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel1.jpg" width="411" height="300" border="0" />
+</div>
+
+<p>
+I again checked to make sure these would fit the box blocks; they could, but needed a little extra sanded to fit when the box was done.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/dowels1.jpg" width="412" height="250" border="0" />
+</div>
+
+<p>
+With the rough cuts made, I next set some of the attachments for dowels (you do not want to do them all at once because they may not fit well later on).  First I set the connections for the three inner pieces (which are the main pieces for the box because the panel rests on them, and the feet attach on the bottom of them).  I wanted to make sure they fit well together so I clamped the pieces to a board with a good right angle and drilled though the side pieces into the front piece.
+</p>
+
+<p>
+Now, to set attachments for each inner board to its corresponding outer board, I had to establish how high I wanted the insides relative to the outsides.  The sides are 2-1/2" high while the insides along with the panel are 1-1/2" + 3/4" = 2-1/4" high.  That leaves 2-1/2" - 2-1/4" = 1/4" left over.  To be safe I gave each side half the remainder, 1/4" / 2 = 1/8" each; this was a good decision because each acrylic panels fit nicely on the top and bottom of the box in the end.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/dowels2.jpg" width="410" height="250" border="0" />
+</div>
+
+<p>
+I drew a line 1/8" from the bottom along each outer side.  I then clamped each inner piece to the outer piece at the precise height.  I drilled two holes through the inner pieces and 1/2" into the outer pieces for the dowels to fit.  It left visible holes, but I did not want to sacrifice precision and do not have a drill press or dowel kit for this.  I could have also used tapered screws for this job just as easily for this connection.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/glue1.jpg" width="432" height="300" border="0" />
+</div>
+
+<p>
+I then glued and clamped the pieces with dowels together and let them dry for a few hours each.  I cleaned away glue with a dry cloth early on and this left a little dark tone on some parts; some masking tape would have been nice to prevent this.  After they dried, I could have easily sawed some dowels and put some plugs in the entry holes (this could be done with screws too), but I kind of liked the holes, so I left them.
+</p>
+
+<p>
+Again, it was time to see how the pieces would fit together with dowels sitting in the inner box pieces.  A few parts were slightly off, so I again smoothed them with 60 grit sandpaper resting on some scrap wood.  The three double-pieced parts of the box were ready to come together, so it was time to tweak the other side for buttons, a cord, and attachment.
+</p>
+
+<p>
+I centered each button hole 7/8" up from the bottom so they would be midway between the control and bottom panels, and proportionally away from the sides of the controller where the sides need to attach.  I wanted four buttons so that a total of ten buttons would cover all the Playstation controller's functions.  I centered the cord hole in the middle 1/4" up so it would be right above the bottom panel.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/back1.jpg" width="663" height="200" border="0" />
+</div>
+
+<p>
+For precision, I started with a 1/16" bit for each hole as a pilot, making sure the drill was level as I made each.  (Note that this first hole is essential to make well as subsequent drilling will be guided by it.)  Since the drill I was using was not entirely precise, I entered through the outside so the buttons would hold an even location where they are visible and used.
+</p>
+
+<p>
+I transitioned to 1/4" to fit the cord and the arbor on the hole saw.  With the board secured on a piece of scrap wood, I made each 24mm hole.  Each took a while because my drill is not very strong and the hole saw and hole had to be cleaned of saw dust often.  When the holes were done, I sanded each with some sandpaper on my fingertip to get them smooth and ready for routing.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/back2.jpg" width="283" height="200" border="0" />
+<img src="example2/back3.jpg" width="318" height="200" border="0" />
+</div>
+
+<p>
+To make the face on the buttons look nice, and be sunk so they are not accidentally hit, I used a 3/16" beading bit (roundover bit with a 1/8" smaller bearing); this fit the faces of the buttons nicely.  I then needed a groove for the buttons to fit on the back, and the beading bit is not big enough to fit the nuts.  I could have delicately done this by hand, or done this well if I could find an appropriate rabbeting bit, but I decided to cheat a bit.  I removed the bearing on a trim bit and used the attachment point as a guide instead; it was kind of sloppy and left some burning, but it worked.  I again sanded it clean with paper on my fingertip.
+</p>
+
+<p>
+For the cord hole, I wanted to make a keyhole where the cord could barely squeeze through the bottom into the 1/4" hole.  I sawed down the middle to the hole and wrapped a ruler with sandpaper and filed it until the cord barely fit through.  An accidental side-effect put a groove in the top of the inside of the keyhole to make it look like a bishop piece.  Oh well.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/back4.jpg" width="406" height="300" border="0" />
+</div>
+
+<p>
+In attaching the back to the side pieces, I did not want any joints to show.  I got some dowel centers to help in setting the holes.  I started with the holes on each side piece making them as level as I could.  I inserted the centers and laid the pieces at a right angle on a board and slid them together to make some groove in which to insert the dowel holes.  I then made holes 1/2" deep as level as I could into the grooves.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/box_x.jpg" width="488" height="300" border="0" />
+</div>
+
+<p>
+Again I then tested how everything fit together.  The dowel holes were a little off and I had to tweak them and make them a bit less snug.  I then tested how the main panel fit into the box.  It was a bit big and I had to take a while sanding it with 60 grit sandpaper taped to a block of scrap wood.  I wanted the panel ready so I would have a gauge in setting the box while it dried.
+</p>
+
+<p>
+With everything in the box ready to come together, I got the pieces, glue, dowels, towels, paper, clamps, scrap wood, and a flat surface ready to put things together.  Since I did not have many large clamps, I started with the front area only.  I covered corners with paper on the main panel so things could be brought together evenly.  I added a thin layer of glued everywhere things would touch and set the front and side pieces even together on a flat surface.  Make very certain that things are set right because it cannot be unglued and you do not want a parallelogram or other bad shape.  Be very ready, and maybe practice a bit without glue, before bringing things together.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/glue2.jpg" width="319" height="300" border="0" />
+</div>
+
+<p>
+After the front dried, I did the same things with the back piece.  I let the box dry for 24 hours.  After everything dried, it was set evenly, but a lot of excess glue dried around the joints.  I wish I set masking tape, or peeled away excess early on.  I had to get a chisel and remove a lot of excess glue where sandpaper could not reach.  This was a pain.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/box1.jpg" width="307" height="200" border="0" />
+<img src="example2/box2.jpg" width="311" height="200" border="0" />
+</div>
+
+<p>
+I then sanded with the grain in and around the entire box using 220 grit sandpaper taped to a block of scrap wood.  I was originally going to use a 1/2" roundover on all the sides of the box (excluding the bottom of the back), but I liked the simple look of the box and decided to keep it.  The controller would have looked much smaller if I routed the edges.  I just used the sandpaper to smooth each corner so the entire box had a good feel.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/box3.jpg" width="533" height="350" border="0" />
+</div>
+
+<p>
+I decided it was time to finish the box.  I could have gone with paint or stain or oil or wax, but I made the choice just to use some polyurethane.  I did three thin coats, letting each dry for almost a day and sanding with 220 grit sandpaper between each, making sure the final coat was extra smooth.  Since it was oil-based, the wood took on more of an amber tone.  One thing that I did not realize was that ends tend to get darker because of their open fibers; it could have been prevented with conditioner or filler, but I like how it looks anyways.  The box was now done.
+</p>
+
+<a name="CONTROLLER_PANELS" />
+
+<h3 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Controller Panels</h3>
+
+<p>
+With the box done, it was time to center on the panels.  Testing the fit of each acrylic panel on the box, each was a bit large.  I had to take a lot of time to sand each panel with 60 grit sandpaper taped to a block of scrap wood.  I made sure the film stayed on the glass and I did not sand the face.  Once they had the proper dimensions, I could work on setting and installing the devices.
+</p>
+
+<p>
+So I could work the two layers of the control panel simultaneously, I placed the screws that hold them together early using 3/4" non-tapered screws while they were set in the box.  I placed them 3/4" from the sides.  I piloted in the holes slowly small to large so the glass would not crack, finishing one screw at a time so they would set together well.  I only used three because I did not want screws getting in the way of where I rest my wrists and palms.
+</p>
+
+<p>
+I maybe should have put two screws at the front near each other to be safe, but the glass did end out flush with the box.  I maybe also should have done the screws securing the main panel to the box first to be sure things would fit together well.  Things turned out well anyways.  I could have also just used screws that would go through the acrylic all the way to the box (which would have made augmenting the controller easier and been the best choice given the inside design).
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/layout1.jpg" width="472" height="300" border="0" />
+</div>
+
+<p>
+Using the clustered template I made and prefer, I printed out the design.  I cut it smaller and positioned it on the box and panel until it suited a position I liked.  I then taped it down and circled where I wanted the joystick.  (I like the joystick near because I rest the side of my palm on the panel and the tip of my thumb on top of the joystick.)
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel2.jpg" width="502" height="300" border="0" />
+</div>
+
+<p>
+I removed the panels from the box so I could work the holes into them on a piece of scrap wood.  I started with 1/16" holes for each button and the joystick as centered and level as I could make them through the top of the panel.  I incrementally transitioned each up to 1/4" for the 1/4" arbor.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel3.jpg" width="489" height="300" border="0" />
+</div>
+
+<p>
+I clamped the panel securely and used a 24mm hole saw for the joystick and a 30mm hole saw for the buttons.  Again, it took a while because the cuts had to be cleaned routinely.  I then separated the two panels.  I went around the edges that had been cut on the acrylic glass with my finger nail and the tip of a screwdriver carefully scraping stray plastic away.  The top acrylic panel was then done and I could remove the protective film.  I sanded the holes in the main panel clean using sandpaper on my fingertip.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel4.jpg" width="285" height="250" border="0" />
+<img src="example2/panel5.jpg" width="413" height="250" border="0" />
+</div>
+
+<p>
+I outlined where the joystick would be routed into the panel.  Because the hole for the joystick will be carved away, I made some extended lines to show where the joystick needs to be centered.  The goal was to route the panel in a way that both a JLF and an LS-32 (S-plate) could fit into the panel.  I wanted to route a 2-1/2" square into which both bodies could fit, and to route about 8mm deep into the top where the joystick plate rests, each using a thin straight bit.  Then a little tweaking would be done to fit the other miscellaneous parts of each joystick.  The button holes would be routed the same way as the side buttons using a trimming bit missing its wheel a little over 1/2" into the bottom of the panel.
+</p>
+
+<p>
+The process of doing this, however, took a lot of tweaking because my measurements were not exact to the joysticks and some other problems occurred.
+</p>
+
+<p>
+While routing the bottom of the buttons, the panel was a bit fragile.  A small chip of the support for the buttons came out while routing.  It was not a big deal since the upper part of the panel was not harmed, but I feel a little lucky a larger chunk did not come out.  Either being sure to transition out material slowly or using MDF would be a good idea in light of this.  I filled the small chip using glue mixed with sawdust.
+</p>
+
+<p>
+Working the joystick area had some problems too.  One main problem was not making the hole for the body big enough.  I had to wrap a piece of wood and sand the hole with 60 grit sandpaper for a while to fit the LS-32.  In retrospect too, I should have made the hole even bigger so the LS-40 could fit in the panel as well.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel6.jpg" width="409" height="250" border="0" />
+<img src="example2/panel7.jpg" width="425" height="250" border="0" />
+</div>
+
+<p>
+Another problem I had in carving the joystick area was I cut excessively in a couple areas.  I slipped and made the area for the JLF to fit the top a little large.  Later I took way too much area out in making space for the LS-32 switches.  The lesson was that I needed more exact markings and needed to take out bits of wood in smaller increments.  So mark things exact and remove a little bit at a time in each sweep of the router when doing the panel.
+</p>
+
+<p>
+I also made the mistake of being slightly careless with the router and a small divot was put in the top of the panel.
+</p>
+
+<p>
+Because I took out an excessive amount for microswitches and bolts had to run through the locations, I had to refill a couple spots.  I cut out a couple small pieces of wood and contoured the pieces until they fit nicely the spots I wanted to fill.  I again mixed saw dust with glue to place the pieces.  (This fix occurred a bit later on.)
+</p>
+
+<p>
+I lightly sanded the panel with 220 grit sandpaper on a block and put a single thin layer of polyurethane on the panel to make it a little stronger and not get affected by moisture.  Unfortunately I found the panel was already slightly warped, but only about 1mm across the panel.  This is another reason to use MDF for the panel.  But the warp did not really affect the final product in any way.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel8.jpg" width="406" height="250" border="0" />
+</div>
+
+<p>
+Installing the joystick, I set the LS-32 in the panel and lined it up with the sides of the panel and centered between the markings.  I used a pencil to shade in the inside ends of the mounting holes 40mm apart as 40mm works for the JLF as well.  I used size 10 tapered bolts though size 8 non-tapered bolts would have been better because they adjust easier.  I piloted and installed each bolt along with the plate one at a time starting with drilling 1/16" going to 11/64".  The bolts fit very solidly and did not really need nuts or washers, but I added them anyways.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel9.jpg" width="391" height="250" border="0" />
+</div>
+
+<p>
+With the areas for the devices set, all that was left for this panel was the holes for securing the panel to the controller box.  I used four 1-1/2" tapered screws.  Each screws went through to one of the inner side panels which were set as the main structures of the box from the beginning.  Again, each screw was piloted and installed one at a time to make the connection set well.  Holes using a 1/4" drill about 1/4" deep were added at the top of each hole so the screws could sink into the panel and the acrylic layer could lay flat on the top.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel10.jpg" width="385" height="250" border="0" />
+</div>
+
+<p>
+Now to install the bottom panel.  Like the control panel, I wanted to attached the feet to the inner sides.  I set the bottom panel in place, got the rubber feet and some smaller screws, and marked the inside of each foot where it needed to be placed.  Again, one at a time, piloting, I put the feet into the bottom.  Since this panel is not as supported, I had to be careful that each foot installment kept the panel flat and in-line with the box.  When this was done, I again shaved the sides with my finger nail and a screwdriver and was able to remove the protective film.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/panel11.jpg" width="384" height="350" border="0" />
+</div>
+
+<p>
+The design turned out structurally very well.  The control panel is about as sturdy and precisely laid out as a panel can be.  The only problem is that changing the joystick can take a while since all the buttons have to be removed in the process as well.
+</p>
+
+<a name="CONTROLLER_PCB_AND_WIRING" />
+
+<h3 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Controller PCB and Wiring</h3>
+
+<p>
+I could have used a designed PCB, but I decided early on I wanted to use a Playstation 1 PCB and cover all ten of its buttons.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/pcb1.jpg" width="393" height="300" border="0" />
+</div>
+
+<p>
+Red 20 AWG wires were soldered to signal nodes more near the center of the PCB by putting solder on each connection part and then melting them together (excluding the left two buttons which had a couple detailed paths scratched for them).  One white 20 AWG wire was soldered to the ground scratched near where the cord brings it into the PCB.  All connections were reinforced using a glue gun.  Excess and unnecessary areas of the PCB were cut away using a hack saw.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/pcb2.jpg" width="396" height="300" border="0" />
+</div>
+
+<p>
+The PCB was small enough to fit into a 4"x2"x1" project box.  I thought for a while how I was going to set things up and if I was going to use a terminal strip for all the signal wires.  After a while, I realized I could drill holes in the project box and use those holes like an organized terminal strip.  I organized the holes proportioned to the switches throughout the controller.  I made another keyhole for the cord in the project box.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/pcb3.jpg" width="285" height="200" border="0" />
+<img src="example2/pcb4.jpg" width="280" height="200" border="0" />
+</div>
+
+<p>
+Making notes for the function of each wire and where I wanted each button to go, I threaded each wire through the appropriate hole in the project box.  Because the 20 AWG wire was so rigid, it took a little while and some effort to thread all the wires through and get the PCB rested in the box.  I was pretty rough on the wires, so it is a testament to the strength of the glued connections that it all still worked afterwards.  Everything held pretty strong in the box and I felt no need for further reinforcement of the PCB or wiring.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/pcb5.jpg" width="343" height="250" border="0" />
+</div>
+
+<p>
+To start wiring for the controller, I secured the project box to the bottom of the panel with a couple screws.  If the box was too thick for the controller, I would have had to route a cove for it, but it was not.  Since I was using a wire harness and different models of joysticks, I secured a four-terminal strip next to the project box also using screws.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/pcb6.jpg" width="427" height="300" border="0" />
+</div>
+
+<p>
+I cut away excess wire where needed because I did not want it straying all over.  All remaining connections were done using crimp-on connectors and terminal.  I connected the directional signal from the PCB to the terminal strip using ring terminals since they would not need changing.  I connected the signals on the wire harness for the joystick to the strip using spade terminals since they may need to be move around later (it happened to turn out they did not need to be moved).
+</p>
+
+<p>
+I distributed the ground to the wire harness and the switches throughout the controller using butt connectors and chaining on the quick connects.  Each individual signal remaining got a quick connect for its connection.  The wiring was now complete.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/pcb7.jpg" width="416" height="350" border="0" />
+<img src="example2/pcb8.jpg" width="427" height="350" border="0" />
+</div>
+
+<p>
+To try everything out, I secured the main panel and started with the JLF joystick.  I put the top acrylic panel over this and secured the buttons; the area to secure them is pretty snug so I used the tip of my mechanical pencil to turn the nuts.  I connected the wire harness to the joystick and all the signal and ground quick connects to their corresponding button.  I tried the controller out and a couple of the spade terminals for the directions had to be switched for the joystick to work right.  With everything now working, the controller was pretty much complete.
+</p>
+
+<a name="CONCLUSION" />
+
+<h3 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Conclusion</h3>
+
+<p>
+Now I just had to insert a background for the control panel.  I am a bit of a purist and went with a simple white piece of paper.  First thing to do is secure the sheet between the two layers of the panel (this is easier when the joystick is not installed).  You can then use a pencil to trace where the cuts will be made, but I decided just to cut it while it was in the panel.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/background.jpg" width="475" height="300" border="0" />
+</div>
+
+<p>
+I first tried to make the holes for the button and joystick using a hole saw; that pulled and tore paper out from between the panels, so I got a new piece of paper.  I got a box-cutter and removed most of the insides on the holes, but left a bit since only most of the paper had to be removed on the holes.  I cut away all the slack on the outside of the panel; if I had a design where all the panels were secured at once, I could have probably trimmed and taped the excess to the side of the panel and slid it in.
+</p>
+
+<p>
+And so, now with a LS-32 and a background, the joystick controller is complete.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="example2/simple2.jpg" width="570" height="400" border="0" />
+<img src="example2/simple3.jpg" width="498" height="400" border="0" />
+<img src="example2/simple4.jpg" width="550" height="400" border="0" />
+</div>
+
+<p>
+Anything I would change?
+</p>
+
+<p>
+The controller is bigger than a lot of custom controllers tend to be.  But I tend to play with my the palms of my hands resting and spanning a pretty large distance.  I would maybe be willing to take about 1/2" off each side, but I am fine how it came out.  About the smallest I would allow a standard control panel would be 11" by 7".  It would look a lot smaller too if the edges were routed with a roundover or chamfer.
+</p>
+
+<p>
+The panel is slightly warped and would either have been better with some MDF or a board verified and sealed level with a coating early on.  I think the box straightens it a bit anyways and I do not feel the warp at all.
+</p>
+
+<p>
+The exposed ends on the front and back corners are dark compared to the rest of the box.  This could have been prevented with conditioner, but I like how it looks like this anyways.
+</p>
+
+<p>
+I routed a bit much for the joystick in the panel.  I should have practiced a little more first, made precise sizing with my pencil before routing, and slowly carved out the areas.  But the panel turned out very strong and accurate anyways.
+</p>
+
+<p>
+The 1-3/4 box design was more difficult than I thought it would be.  It requires good precision and a little added effort.  Using it depends on what you want in a controller.
+</p>
+
+<p>
+All-in-all, the controller turned out very well.
+</p>
+
+</div>
+
+<!-- Bottom divider sharing color of navigation box. -->
+<div style="border-width:2;border-style:solid;border-color:black;background-color:#000099"><p></p></div>
+
+<!-- Simple bottom navigation. -->
+</p>
+<a href="example3.html"><img src="nav/next.png" hspace=25 vspace=0 align="right" border="0" alt="Next" /></a>
+<a href="example1.html"><img src="nav/back.png" hspace=25 vspace=0 align="left" border="0" alt="Back" /></a>
+<div style="font-size:10" align="center"><a href="../index.html"><img src="../slagcoin/sc_small.png" align="center" width="64" height="25" border="0" /></a> <br /> &copy 2008-2009 slagcoin</div>
+</p>
+
+<br />
+
+</div>
+
+</table>
+
+</body>
+
+</html>

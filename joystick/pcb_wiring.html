@@ -1,0 +1,992 @@
+<html>
+
+<head>
+
+<link rel="SHORTCUT ICON" href="http://www.slagcoin.com/joyicon.ico" />
+
+<title>Joystick Controller - PCB and Wiring</title>
+
+<!-- Joystick controller pages authored by slagcoin. -->
+<meta name="author" content="slagcoin" />
+<meta name="keywords" content="joystick controller, stick, stik, joystick, joysticks, controller, arcade controller, arcade stick, arcade, custom joystick, custom controller, custom stick, custom, homemade controller, homemade joystick, homemade stick, built, control, controls, arcade controls, arcade button, arcade buttons, button, buttons, arcade pushbutton, arcade pushbuttons, pushbuttons, pushbutton, happ, sanwa, seimitsu, competition, jlf, jlw, ls-32, ls-33, ls-40, ls-55, pcb, American, Japanese, part, parts, microswitch" />
+<meta name="description" content="Site that gives information on arcade parts and home joystick controllers." />
+<meta name="revised" content="February 24, 2009" />
+
+</head>
+
+<!-- Page style; background color has about 50% less of the darkness of the corresponding navigation icon. -->
+<body style="font-family:verdana,helvetica,arial,georgia,times new roman,new courier;font-size:10pt;background-color:#FF99FF">
+
+<!-- Navigation images copied to each section because iframes are a pain.-->
+<p>
+<a href="introduction.html"><img style="border-width:1px;border-color:black" src="nav/intro.png" width="100" height="100" alt="Introduction" /></a><a href="pad.html"><img style="border-width:1px;border-color:black" src="nav/pad.png" width="100" height="100" alt="The Joystick Vs The Control Pad" /></a><a href="basic.html"><img style="border-width:1px;border-color:black" src="nav/basic.png" width="100" height="100" alt="Basic Parts" /></a><a href="joystick_components.html"><img style="border-width:1px;border-color:black" src="nav/component.png" width="100" height="100" alt="Joystick Components" /></a><a href="attributes_brands.html"><img style="border-width:1px;border-color:black" src="nav/joys.png" width="100" height="100" alt="Joystick and Button Attributes and Brand Parts" /></a><a href="restrictors.html"><img style="border-width:1px;border-color:black" src="nav/gate.png" width="100" height="100" alt="Joystick Engagements and Restrictors" /></a><a href="layout.html"><img style="border-width:1px;border-color:black" src="nav/layout.png" width="100" height="100" alt="Panel Layout" /></a><a href="tools.html"><img style="border-width:1px;border-color:black" src="nav/tool.png" width="100" height="100" alt="Tools and Other Parts" /></a><a href="mounting_layering.html"><img style="border-width:1px;border-color:black" src="nav/layer.png" width="100" height="100" alt="Panel Mounting and Layering" /></a><a href="box.html"><img style="border-width:1px;border-color:black" src="nav/box.png" width="100" height="100" alt="Controller Box" /></a><a href="pcb_wiring.html"><img style="border-width:1px;border-color:black" src="nav/pcb.png" width="100" height="100" alt="PCB and Wiring" /></a><a href="decoration.html"><img style="border-width:1px;border-color:black" src="nav/decor.png" width="100" height="100" alt="Material and Decoration" /></a><a href="example1.html"><img style="border-width:1px;border-color:black" src="nav/one.png" width="100" height="100" alt="Example Ingredients" /></a><a href="example2.html"><img style="border-width:1px;border-color:black" src="nav/two.png" width="100" height="100" alt="Example Detailed Controller Build" /></a><a href="example3.html"><img style="border-width:1px;border-color:black" src="nav/three.png" width="100" height="100" alt="Example Summarized Controller Builds" /></a><a href="brand_controllers.html"><img style="border-width:1px;border-color:black" src="nav/cont.png" width="100" height="100" alt="Brand and Custom Arcade Controller Makers" /></a><a href="references.html"><img style="border-width:1px;border-color:black" src="nav/misc.png" width="100" height="100" alt="Links and References" /></a><a href="../joystick.html"><img style="border-width:1px;border-color:black" src="nav/home.png" width="100" height="100" alt="Front Page" /></a>
+</p>
+<!-- End copied navigation images. -->
+
+<!-- Table to give page better layout; divided for standard background. -->
+<table border="0" width="800" align="center">
+<div style="background-color:white">
+
+<!-- Top divider sharing color of navigation box. -->
+<div style="border-width:2;border-style:solid;border-color:black;background-color:#FF00FF"><p></p></div>
+
+<!-- Margins smaller than the backgrounds for better layout. -->
+<div style="margin-left:25;margin-right:25">
+
+<!-- Navigation box and head title. -->
+<p>
+<img src="nav/pcb.png" style="margin-right:30;margin-bottom:30" width="100" height="100" align="left" border="1" />
+<h1 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier">PCB and Wiring</h1>
+</p>
+
+<a name="***PCB_AND_WIRING***" />
+
+<p>
+A PCB from another source can be used in replacing the electronics in a standard device, or giving communications to a custom controller.
+</p>
+
+<p>
+The simple goal in wiring is to have the grounds and signals of each device linked to the ground and desired corresponding signals on the PCB.  Each device has switches; when the switch is engaged, a circuit between the ground and signal should complete and send the signal from the PCB through a cord or remote to the computer or console.  Wires and connectors, solder, and/or twisting are used to link the devices to the PCB.
+</p>
+
+<p>
+For quality PCB wiring, the main goals are having required signals covered by the PCB, corresponding ground and signal connections and circuits, solid and secure connections, connections that will not cross or interfere, insulation, and some level of organization.
+</p>
+
+<p>
+While this wiring concept is simple, implementing it can be more difficult as you can see by the size of this section.
+</p>
+
+<p>
+Contents<br />
+<a href="#GROUNDS_AND_SIGNALS_AND_CIRCUITS">Grounds and Signals and Circuits</a><br />
+<a href="#PCB_ATTRIBUTES">PCB Attributes</a><br />
+<a href="#EXTRACTED_PCBS">Extracted PCBs</a><br />
+<a href="#SOLDERING">Soldering</a><br />
+<a href="#PCB_MAPPING_AND_SOLDERING">PCB Mapping and Soldering</a><br />
+<a href="#PCB_COMPONENTS_MODIFICATION_AND_REMOVAL">PCB Components Modification and Removal</a><br />
+<a href="#SOLDERLESS_EXTRACTED_PCBS">Solderless Extracted PCBs</a><br />
+<a href="#PCB_DIAGRAMS">PCB Diagrams</a><br />
+<a href="#WIRE">Wire</a><br />
+<a href="#TERMINALS_AND_CRIMPING">Terminals and Crimping</a><br />
+<a href="#TWISTING">Twisting</a><br />
+<a href="#SPLICING_AND_CHAINING">Splicing and Chaining</a><br />
+<a href="#JOYSTICK_CONNECTION">Joystick Connection</a><br />
+<a href="#TERMINAL_STRIPS_AND_ORGANIZATION">Terminal Strips and Organization</a><br />
+<a href="#CUSTOM_PCBS">Custom PCBs</a><br />
+<a href="#MULTIPLE_PCBS">Multiple PCBs</a><br />
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="GROUNDS_AND_SIGNALS_AND_CIRCUITS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Grounds and Signals and Circuits</h2>
+
+<p>
+In order to understand the function of a ground and a signal in a switch and its device, you have to understand a few things about electricity.
+</p>
+
+<p>
+For electricity to do its work, it has to flow; the movement of electrons is what usually gives electricity its effect on things.  In order to flow, electricity needs an entry point and an exit point, and there has to be a difference in charge between the entry point and the exit point.  Electrons flow quickly from an area with relatively more electrons to one with relatively fewer electrons.
+</p>
+
+<p>
+The flow of electricity from one charge to a different charge is where the signal and ground come into play.  In most circumstances, the signal has the added charge; each signal comes with unique attributes to send unique commands.  And, in most circumstances, the ground has no charge; it gets its name from the fact that the ground of the earth usually has no charge and is a good place to connect the outlet of an electronic device; since the ground has no unique attributes, usually the same ground (often called a common ground) gets used by various signals, acting as a sink for the charge used by signals.
+</p>
+
+<p>
+A circuit is basically a connection between different charges.  When a switch is not engaged, the connected circuit is open and not completed, and usually no work is done.  When a switch is engaged, the connected circuit is closed and completed, and work is done by the electricity.  When a signal is connected with a corresponding ground, a circuit is completed and the device does its work.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="PCB_ATTRIBUTES" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">PCB Attributes</h2>
+
+<p>
+Circuits are at the heart of electronics.  In order to compact, organize, and exploit many circuits, they are often printed on a board, making a printed circuit board, ie a PCB.  Numerous and detailed conductive paths lay out the circuits and functions for a device.
+</p>
+
+<p>
+The bulk of most PCBs is made of a light, highly durable, nonconductive substance with a texture similar to fiberglass.  On this another nonconductive layer (usually dark-green) that bonds well to metal is added.  On this is added the conductive metal (usually copper) that makes up all the paths in the PCB.  On the metal that does not need to be exposed, a nonconductive protective layer (usually light-green and called a solder mask) is used.
+</p>
+
+<p>
+In older PCBs, usually only one side of the PCB is used.  In newer PCBs, both sides are often used by adding small, conductive through-holes in the PCB.
+</p>
+
+<p>
+Solder points consisting of an open metal plate with a hole in the center are used to connect wires that send and receive signals.
+</p>
+
+<p>
+Originating from a wire in the cord or battery is the ground; it usually gets spread throughout the PCB in a long path.  A ground is easily recognized as its path chains to several nodes.  Sometimes multiple grounds are used and will need to have corresponding ones provided to each signal.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/simple.jpg" width="530" height="264" border="0" /><br />
+Image:  NES PCB
+</div>
+
+<p>
+For each signal, there is a path leading from a node (like a button or solder point) to an integrated circuit (a chip) which is powered by the charge in a different wire in the cord or battery.  When a signal is connected to its ground, it gets received by the integrated circuit.  The integrated circuit turns the charge into a command and sends it down other paths to the solder points connecting to the cord or remote.
+</p>
+
+<p>
+The PCB's structure can be regarded as simple nodes (like solder and button points) and connections (paths) between those nodes (this is how electronics diagrams are made).  Because electricity travels near the speed of light, as long as they connect, the length of the paths between nodes is not really important.  And anything that connects anywhere along those paths can usually emulate what the connected node(s) does.
+</p>
+
+<p>
+PCBs in pad controllers are usually spread throughout the inside proportioned to the buttons and pads.  Commands in pad controllers are made by having a small, conductive plate at the bottom of each button press down directly onto the PCB to complete the circuit between the ground and signal paths.  Often conductive rubbery nodes (usually black) are placed where buttons are pressed.  Sometimes metal plating will be beneath it, while others will branch to a metal plate.
+</p>
+
+<p>
+PCBs often have added pieces and components that can be removed without making the PCB malfunction.  These include rumble motors and bare areas of the PCB usually like shoulder button PCBs and the caps on analog sticks.  But when it comes to the analog sticks themselves and other electronic components, caution should be used, and things get more complicated.  Removal of these is discussed in a later subsection.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="EXTRACTED_PCBS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Extracted PCBs</h2>
+
+<p>
+The goal in extracting a PCB from a device is to modify it to work for another instrument.
+</p>
+
+<p>
+The drawback to using an extracted PCB is that it will usually require soldering with more permanent and complex steps in building your controller, and it takes more time and experience than using a premade PCB.  The upside is you can easily choose the system for which your controller is designed, get cheaper converters, and maybe save a bit of money.
+</p>
+
+<p>
+Find a device like a keyboard or gamepad (preferably) with the compatibility and the number of commands you need (one for each button, four for the joystick).
+</p>
+
+<p>
+There are trade-offs to using a first- or third-party device.  First-party devices, made by the same makers of the console, generally have great performance with the machine for which they are designed, but often are more expensive.  Third-party devices, made by independent makers, can sometimes have performance problems, but are usually less expensive; an example of this is, due to complex formatting, many third-party Playstation 3 controllers have a flaw that will not allow the left direction to engage for more than a few seconds.
+</p>
+
+<p>
+Third-party devices can also be more delicate.  Often, a much thinner, more fragile layer of metal is used on the PCB (if the PCB is not damaged during modification, this is not a problem).  Some makers (like Intec) also intentionally make their controllers very difficult to modify.  For these reasons, it is often a good idea to either use a first-party device, or make sure a specific model of a third-party device works well.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/converter2.jpg" width="289" height="250" border="0" />
+<img src="pcb_wiring/converter3.jpg" width="332" height="250" border="0" /><br />
+Images:  Converters
+</div>
+
+<p>
+Using a first-party Playstation 1 controller is often a good option as it is inexpensive and has a lot of buttons, good performance, simplicity, Playstation 2 compatibility, and a lot of converters made for its use on computers and other consoles.  Dual Shock 1 controllers are often preferred because they have better compatibilities with some converters and PS2 games.  Some converters can lag a fraction of a second, or have interfering signals, so look around for recommendations in quality converters (SDTekken has some of this information <a href="http://www.sdtekken.com/" target="_blank">link</a>).  Also note Xbox 360 and PS3 controllers work on PCs with the proper drivers.
+</p>
+
+<p>
+A used or even broken controller will also work fine as long as the PCB (which is pretty much sealed) and cord or remote are fine, so check your old controllers or local game stores or trading websites.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/controller.jpg" width="285" height="250" border="0" />
+<img src="pcb_wiring/opened.jpg" width="372" height="250" border="0" /><br />
+Images:  Simple, yet very practical, controller; Controller opened
+</div>
+
+<p>
+When extracting the PCB, make sure not to disturb the board(s), the wiring between the board(s) and cord or remote, and the cord or remote itself; these are the things you need.  Undo all the connections that hold the device together (usually just screws) before opening it up.
+</p>
+
+<p>
+I do not recommend going through the trouble of using keyboard PCBs unless you are already very familiar with modifying them.  Many keyboard manufacturers also specifically design their PCBs in a way that makes exploiting them for other things difficult.  Keyboard PCBs can have problems with sending multiple signals close to the same time called "ghosting" (you can be familiar with this by the reaction your computer gives you when you mash keys) and may require some extra work to function properly.  Plus it can be difficult to distinguish game commands from standard keyboard commands on your computer.  PCBs from game controllers are much easier.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="SOLDERING" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Soldering</h2>
+
+<p>
+Solder is conductive metal that melts at a relatively low temperature and is used to bond two or more metal surfaces; it can be described as conductive, metal, hot glue.  Solder does not bond things that are not made of metal.  In regards to a controller, it can be used to bond wire ends to metal spots on an extracted PCB and/or switch terminals on devices like joysticks and buttons, or even crimping terminals.
+</p>
+
+<p>
+Soldering is not the same as welding which melts two metal objects together without an added substance using very high temperatures not feasible for electronics.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/equip.jpg" width="503" height="300" border="0" />
+</div>
+
+<p>
+Soldering takes a bit of practice.  It is not as simple as melting things together.  There are a few complicating things.
+</p>
+
+<p>
+For solder to bond to a metal surface, the surface also needs to be heated.  There is a slight welding of the solder to the metal surface.  Soldering irons actually are not specifically designed for melting solder, they are for heating surfaces so the surfaces can melt the solder.  Soldering  works best when the metal surface(s) is heated and the solder is melted on the heated metal surface.  When molten solder comes in contact with a metal surface that is properly heated, it attracts to it like a magnet.  A good solder connection should hold like strong glue.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/bond.png" width="438" height="188" border="0" /><br /><br />
+Image:  Weak solder connection due to oxidation or lack of heating (left), strong connection (right)
+</div>
+
+<p>
+Adding a very small bit of solder to the tip of the iron gives it a medium to transfer heat from the soldering iron to the metal surface (this is called wetting).
+</p>
+
+<p>
+The main cause of difficulty in soldering is oxidation.  Oxidation removes electrons from metal particles; this does two negative things in electronics soldering.  It makes metal less conductive.  And it makes solder and metal surfaces not adhere as well.  Oxidized metal looks dirty and dull.  Oxidized solder is dull (though lead-free solder always is) and more white, and is not cohesive or adhesive.  Unfortunately, oxidation occurs at a substantially faster rate when metal is heated.
+</p>
+
+<p>
+Oxidation is fought in a few ways.  If dirty, the surfaces of the metal need to be cleaned before soldering using abrasives like steel wool, sandpaper, or scraping using things like the head of a wire.
+</p>
+
+<p>
+The main oxidation fighter in soldering is flux.  Flux removes oxidation.  One main flux substance is rosin (hence the use of rosin-core solder; flux can also be found by itself).  You see the flux when you melt fresh solder and smokes emerges; the smoke comes from the flux.  Fresh rosin-core solder or flux added to old solder can also help remove oxidation.  When working with oxidated metal, you can often see it take on that magnetic quality once flux has been heated into it.
+</p>
+
+<p>
+As you can see when you melt solder, the flux (smoke) only lasts so long.  This introduces another fighter of oxidation:  speed.  The solder and the metal surfaces should be heated for as little period of time as possible.
+</p>
+
+<p>
+There are many objects that can go into a solder connection:  two or more metal surfaces, solder, and a soldering iron.  You only have two hands and should not try stunts to hold many things at once.  Use things like clamps and alligator clips or helping hands to hold surfaces, and techniques that fit working with two hands.
+</p>
+
+<p>
+With these concepts in mind, there are two main methods for soldering.  In each the soldering iron needs to warm to a high temperature beforehand.
+</p>
+
+<p>
+The first and more difficult technique involves placing the two metal surfaces in their final position, holding the soldering iron in one hand and the solder in the other, and heating both surfaces while adding the solder.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/steps1.png" width="557" height="378" border="0" /><br /><br />
+Image:  Soldering all surfaces simultaneously:  the soldering iron is wetted, the iron is applied to heat both surfaces and solder is added to one side, solder is applied to surround the connection, excess is cut away (this is best done with diagonal cutters)
+</div>
+
+<p>
+The second and easier technique involves placing most of the needed solder on each metal surface (this is called tinning) and then melting them together with the soldering iron in one hand and one of the surfaces in the other.  Tinned surfaces generally take solder connections easily.  The downside of this technique is slightly more oxidation occurs.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/steps2.png" width="668" height="330" border="0" /><br /><br />
+Image:  Soldering in individual steps:  half the needed solder is heated to one surface, the other half is applied to the other surface (both cool), the soldering iron is wetted (with more solder than usual), the two are melting together
+</div>
+
+<p>
+Another technique that is a hybrid of these two techniques is putting solder on only one of the surfaces and the tip of the soldering iron and quickly heating the surfaces together.  This technique may be preferred if one of the surfaces (like a thin or cheap PCB path) is fragile.
+</p>
+
+<p>
+Be sure to use thin rosin-core solder or plain solder along with flux paste, and use a lower heat (about 15 or 40 watts, 15 to 25 being more appropriate) soldering iron with a thin head to compliment the small size of PCBs and control oxidation.
+</p>
+
+<p>
+The head of a soldering iron endures oxidation and other contaminates that make it less effective too; it needs to be cleaned often using things like damp sponges, and steel wool and fresh and quickly removed rosin-core solder or simple flux.  The iron should be wiped clean with a damp sponge before being set idol.  If the head on a soldering iron is old and not holding solder in small drops, it should be replaced to avoid poor solder connections.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/station.jpg" width="335" height="300" border="0" />
+</div>
+
+<p>
+There is a high chance in learning to solder you will get burned a few times.  Treat burns with cool (not cold) water and maybe some ointment and bandaging.  Remember to be organized, not to touch any metal on the soldering iron, and that heat transfers (do not hold objects near where they are being heated).  Consider getting a soldering station to make things easier; a station can also extend the life of the iron and its head.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/gun.jpg" width="354" height="250" border="0" />
+</div>
+
+<p>
+A good ally to soldering can be hot glue (most associated with glue guns).  It does not conduct electricity and reinforces solders so they will not later break.  This makes being gentle with the PCB not so necessary.  Usually, good solder connections hold well without glue, but smaller connection, cheap PCBS, or heavier wire may need its help.  Hot glue can also help hold a base of a wire to an unused part of the PCB to make it easier to get the wire held in the needed place before soldering, and give even more reinforcement.  Hot glue can be removed with some warm air and peeling.  Other more permanent strong glues can also do this job.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="PCB_MAPPING_AND_SOLDERING" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">PCB Mapping and Soldering</h2>
+
+<p>
+Before extracting a PCB, make sure all the functions are working properly so you know that the PCB is sound.  Once a PCB has been extracted, if the cord is not secured strongly to the PCB with a harness, it is a good idea to reinforce the cord's connection with hot glue.
+</p>
+
+<p>
+When wiring a PCB extracted from a pad controller, you need to solder a wire to the signal for each of the needed buttons, and one (or more) wire to each of the unique grounds used by those signals.  The ground is usually shared around in the PCB and therefore can be shared among all the signals.  If the ground is not completely universal, you will need to pair each unique ground with its corresponding signal.  Even when the ground is universal, some builders prefer attaching a wire to each ground at each button.
+</p>
+
+<p>
+There is usually a large area for each signal (and another with it for the ground) under each button on the PCB.  You need to figure where to attach easily each corresponding wire on the PCB.  You may find a diagram that lays out the various points of attachment here or elsewhere online.  You can recognize grounds if their paths are used in more than one button.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/beginning.jpg" width="601" height="297" border="0" /><br />
+</div>
+
+<p>
+The best way to map a PCB is to rest the PCB on something nonconductive, plug it in, get a wire, and tap the ends around on the paths of the PCB, noticing what commands occur, to figure what each path represents.  Again, signals will usually have unique paths while grounds will get shared.  Use this to recognize paths and nodes where wires can be attached.  (This is the method I have used in mapping most my PCBs.  A controller PCB should not have enough voltage to shock you.  They are usually 5 volts, upwards of 10, and you should not even feel anything.  I have not been shocked doing this, grabbing many plugged PCBs in many ways, but do not hold me responsible if you manage to find a way to hurt yourself doing this.)
+</p>
+
+<p>
+In soldering a certain model of PCB for the first time, I recommend testing the PCB often.  Every few attachments, check if things are working properly.  Start by connecting a ground and test the signals as you go.  This testing will help you narrow down when and where things go wrong in the soldering process.
+</p>
+
+<p>
+Each chosen place to solder should not come in contact with other soldering points or components or nodes; this can cause signals to constantly be engaged, or other problems.  You will need a wire cutter and stripper to prepare the wire for soldering.
+</p>
+
+<p>
+If necessary, use an abrasive tip like a wire end to scratch rubber or the light-green protection and expose metal where solder can be attached (a rotary tool with a small abrasive tip is good for this).  It is even possible to solder wire to thin paths among other paths; use a pin and very carefully scratch the correct path and avoid scratching the others (it is not easy); support for the wire and immediate glue will be necessary to keep a solder like this attached and not tearing the path away.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/begin.jpg" width="200" height="150" border="0" />
+<img src="pcb_wiring/close.jpg" width="200" height="150" border="0" />
+<img src="pcb_wiring/prep.jpg" width="200" height="150" border="0" />
+<img src="pcb_wiring/sold.jpg" width="200" height="150" border="0" />
+<img src="pcb_wiring/glue1.jpg" width="200" height="150" border="0" />
+<img src="pcb_wiring/glue2.jpg" width="200" height="150" border="0" /><br />
+Images:  Two soldering techniques:  Rubber scraped off signal plates; Wires; Prepared solder added to one set, hole drilled and wire inserted on other; Soldering done; Glued on top for top soldered wire, and excess cut; Glued on bottom for drill solder
+</div>
+
+<p>
+There are a couple ways to attach wires to the PCB.  You can attach the wire directly to metal plating on the surface (bending the wire end to an L-shape can help in this).  Or you can drill a hole using a strong 1/16" (2mm; I tend to recommend at most 1/32" or 1mm; small rotary tools are great for this too) or less drill bit by the metal plate and thread the wire through the bottom to solder it like standard soldering is done (this can be tricky and should not be done on double-sided PCBs).
+</p>
+
+<p>
+Solder points can be replaced using your own wire.  Heat the wire end protruding from the solder point while pulling the wire out.  Make sure to recreate the hole by pushing the tip of the iron into the hole or by using a desoldering tool, or just push the new wire through while the point is heated.  Add some fresh solder or flux to remove oxidation.
+</p>
+
+<p>
+Do not pull hard on cooled solder connections; the metal plating (especially in smaller areas) can easily be ripped from the PCB.  Sometimes solder touching a wrong location can be cut away using an utility knife.
+</p>
+
+<p>
+If an attachment does not seem to be holding (often because rubbery substances are melting in the way), scrape the metal surface again.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/complete.jpg" width="612" height="455" border="0" /><br />
+Image:  Finished soldering:  most solders were done on nodes reached from actual button spots, others were attached to detailed scratched paths; the plan was clustered so much of the PCB could be cut away using a hack saw; the solder points were glued because the 20 AWG wire used is heavy and rigid
+</div>
+
+<p>
+Parts of the PCB that are not critical (like motors and often shoulder PCBs) can be desoldered or cut away from the rest to make it smaller using a strong tool.  You may want to try to cluster the solders to make this work better.  Just be sure not to cut something essential away; you will have to replace paths and/or components if it makes the PCB malfunction.  The next section discusses this.
+</p>
+
+<p>
+A box (called a project box/enclosure in electronics) or groove in or box built into the bottom of the control panel is often made to house and protect the extracted PCB.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="PCB_COMPONENTS_MODIFICATION_AND_REMOVAL" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">PCB Components Modification and Removal</h2>
+
+<p>
+This subsection is a little more advanced than the others, but it is not all that complicated.  I intentionally separated this subsection because it is more difficult and not necessary in the PCB process.  But those wanting to go the extra mile are perfectly welcome.
+</p>
+
+<p>
+As already stated, PCB shoulders, motors, and analog stick caps can usually be removed without a problem.  But removing things beyond that, like electronics components and their paths, can easily cause the PCB to malfunction.
+</p>
+
+<p>
+Many small components are often also added to make the controller function; usually, the newer the controller, the more added components it has.  Some of the components include (and this stuff is not very important so do not let it throw you):
+<ul>
+<li>Capacitor - stores an electric charge; often labeled with a C followed by a number.</li>
+<li>Diode - allows electricity to flow only one direction; often labeled with a D followed by a number.</li>
+<li>Ground - signal sink that allows electricity to flow; often labeled with GND.</li>
+<li>LED - light emitting version of a diode.</li>
+<li>Integrated Circuit - processes and augments signals; often label with a U followed by a number.</li>
+<li>Jumper - jumps a conductive path outside the PCB; often labeled with a J or JP followed by a number.</li>
+<li>Resistor - decreases current and voltage; often labeled with an R followed by a number.</li>
+<li>Variable Resistor - gives varying resistance using a lever; often labeled with VR followed by a number.</li>
+<li>Switch - place where signals toggle on and off; often labeled with SW followed by a number.</li>
+<li>Test Point - metal plate linked to paths used for testing; often labeled with TP followed by a number.</li>
+<li>Transistor - increases current and voltage; often labeled with a Q or T followed by a number.</li>
+</ul>
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/complex.jpg" width="540" height="328" border="0" /><br />
+Image:  PS2 PCB
+</div>
+
+<p>
+Almost always, if one of these components is removed from contact with the proper paths on the PCB, the PCB will not function properly.  Console and controller makers make their systems and controllers more complex to offer more functionality and make their hardware more exclusive and difficult to imitate; they often add features that will make their controller easily fail if modified.
+</p>
+
+<p>
+More complex circuitry is also how makers can create multiple grounds.  But multiple grounds is not an accurate term; there is only one simple ground (usually using the one beneath your feet), and it comes from a unique wire or battery sink in the PCB.  What these more complicated PCBs have are commons, which is a term short for common lines/paths.  Complex processors dictate diverse paths that must interact to engage.  Signals that share these different paths have commons.  Sometimes one of these commons is the actual ground coming from the cord or battery.  A common ground (as opposed to a simple common line) is the ground shared among a set of signals (usually all of them) for engagement.
+</p>
+
+<p>
+Many PCBs (especially newer ones) use variable resistors for things like analog sticks and trigger buttons.  Variable resistors make analog functions possible by giving varying degrees of voltage for different signals.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/analog1.jpg" width="208" height="200" border="0" />
+<img src="pcb_wiring/analog2.jpg" width="221" height="200" border="0" /><br />
+Images:  Analog stick; Analog stick connections
+</div>
+
+<p>
+The analog sticks in most controllers are constructed in the same way.  Four corner solder points are used to secure the stick to the PCB.  Four more solder points are used to secure the click button which is a switch between the two points close to the stick and the two points far from the stick.  And, most essential, two variable resistors are attached, one measuring horizontal movement, the other measuring vertical movement.
+</p>
+
+<p>
+Each variable resistor has three attachment points.  One of the side ones is a lower voltage, usually the ground.  The other side one is a higher voltage, usually the voltage from the cord.  The same lower voltage and higher voltage sources usually each get distributed to each variable resistor.  The middle point is the receiving signal for the processor.  Varying voltage is sent through the signal by adding varying resistance between the side voltages.
+</p>
+
+<p>
+The problem in removing variable resistors is it leaves zero voltage.  Because of this the PCB will usually consider them engaged.  Triggers will be usually be viewed as held in, and analog sticks will be viewed as a diagonal.
+</p>
+
+<p>
+To replace variable resistors with steady resistors that will make it so interfering signals are not sent, first remove the resistor by heating the three solder point and pulling it out.  For variable resistors used by triggers, usually one steady resistor is needed between the voltage source and the middle signal point.  This will send a low voltage (which usually is not zero) and make the PCB consider it unengaged.  10K resistors usually work fine, but around 5K is often preferred so it does not affect much current in the PCB.
+</p>
+
+<p>
+In replacing analog sticks and their variable resistors, things are more complicated.  First, removing them from several solder points can be difficult.  You can usually bend the resistors away from stick and just deal with removing the other eight points.  You will need some desoldering braid and probably some flux paste.  Desoldering braid works like a mop; first cover the solder needing removal with flux paste so the heat does not ruin the board and the braid can absorb the solder, then press the braid directly against the solder and heat it using a soldering iron; move the braid around like a mop and collect as much solder as you can.  You can also submerge it in constantly heated solder and have it soak it up.  Keep in mind the braid needs to be heated too to absorb the solder.  As braid is used, it is cut and thrown away.  With as much solder removed from the analog sticks as possible, push the stick out of the PCB; you may need some pliers to help in this.
+</p>
+
+<p>
+Note also that desoldering braid can help temporarily removed the cord to make the PCB easier to work.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/removal.jpg" width="451" height="300" border="0" /><br />
+Image:  Analog sticks getting replaced with many steady resistors
+</div>
+
+<p>
+The PCB might be perfectly functional with the bulk of the sticks removed and bent variable resistors remaining, but you can replace them with steady resistors.  But unlike trigger resistors, analog sticks use the full range of voltage in determining direction; full voltage will be all the way up, zero voltage will be all the way down, and a voltage in the middle of those will be neutral.  To put the voltage in the middle, two equal resistors (that can range between 3.3K and 10K, around 5K usually ideal for current) are needed.  One resistor needs to be between the middle point and each side point to achieve a middle voltage.
+</p>
+
+<p>
+But there can also be another problem for analog stick removal, and it comes from the click switch.  Click switches can have paths necessary to keep the PCB functional.  The most surefire way to deal with this is to examine the analog stick and see what parts of the switch connects (usually the inside set and outside set connect); add wire to the PCB connecting the necessary switch points.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/h_before.jpg" width="325" height="250" border="0" />
+<img src="pcb_wiring/h_after.jpg" width="327" height="250" border="0" /><br />
+Images:  Analog PCB getting replaced with distributed voltage using resistors
+</div>
+
+<p>
+Usually many variable resistors can be removed in modifying a PCB, which tends to mean many resistors are necessary.  But as Toodles has pointed out, you only need one for removing all the triggers, and two for removing all the analog sticks.  Each of the middle signals is looking for a certain voltage.  The voltage from one spot where resistance has been applied can be distributed to all the middle points needing that same voltage.  So, using added wire or solder touching all the needed paths, the voltage can be taken from the ends of the steady resistors to the middle points needing it.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/madcatz.jpg" width="402" height="200" border="0" /><br />
+Image:  Xbox 360 Madcatz 4716 (late version) analogs neutralized with 3.3K distributed resistors, and triggers neutralized with 1.5K resistors but using 3.3K to engage
+</div>
+
+<p>
+Usually analog sticks use variable resistors in the same way, but triggers can use them differently.  In some cases the PCB will require more resistance/less voltage to engage the trigger.  A multimeter can help in determining this.
+</p>
+
+<p>
+Modifying resistors can be complicated.  I recommend constantly testing between procedures so you can narrow down where something went wrong.  Do one stick at a time and test often.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/resistors.jpg" width="305" height="200" border="0" /><br />
+Image:  Resistors, 4.7K (yellow, purple, red), 8.2K (grey, red, red), 10K (brown, black, orange)
+</div>
+
+<p>
+It is also possible to turn variable resistors into on-off switches.  No resistance occurs when either two points have no connectivity or full connectivity (like a wire linking them).  To make added steady resistors into a switch, connect one side of a switch terminal to one side of the resistor, and the other side of the resistor to the other terminal; when the switch engages, the voltage goes low or high, and it is engaged.  This can also be used to turn the analog stick resistors into directional switches.  Note each signal will need its own set of steady resistors.  Also note this is much more difficult when the analog signal requires higher resistance for engaging.
+</p>
+
+<p>
+As demonstrated already, sometimes some of the PCB itself can be cut away.  In newer PCBs, this can be very risky.  Like variable resistors, it's all about replacing what is removed.  When cutting away bare parts of the PCB, usually paths will need to be replaced with linking wire.  I tend not to recommend this stuff on newer PCBs.
+</p>
+
+<p>
+The other thing often modified on an extract PCB is the cord.  Wires in the cord can just be treated as paths on the PCB.  Where one thing is disconnected, it needs to be reconnect.  If using a different make of cord, you will probably need a multimeter to determine what parts of the PCB lead to what terminal in the plug, and what wire goes to which terminal in the new cord.
+</p>
+
+<p>
+The multimeter can be a very useful device.  For a PCB, it can measure resistance, voltage, and connectivity.  It can be used in measuring exact resistances to replace in the PCB, where the voltage is located, and what points connect where.  I have used the connectivity setting in my multimeter to find grounds or commons in PCBs (because they are shared) and test points linked to commons and signals (if any).
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="SOLDERLESS_EXTRACTED_PCBS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Solderless Extracted PCBs</h2>
+
+<p>
+A few specific models of controllers can be utilized without soldering; this method is often called the spiffyshoes hack after the user who brought it attention.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/ps2_bb.jpg" width="314" height="200" border="0" />
+<img src="pcb_wiring/ps2_bg.jpg" width="300" height="200" border="0" /><br />
+Images:  PS2 controller without solderless structure; PS2 controller with possible solderless structure (note smaller font)
+</div>
+
+<p>
+The following models of PCBs can use the solderless technique:
+<ul>
+<li>PS1 Dual Shock A (Late Version)</li>
+<li>PS1 Dual Shock M</li>
+<li>PS2 Dual Shock A (Early Version w/ Resistor)</li>
+<li>PS2 Dual Shock A (Late Version)</li>
+<li>PS2 Dual Shock M</li>
+<li>PS3 Sixaxis</li>
+<li>PS3 Dual Shock</li>
+</ul>
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/solderless_inside.jpg" width="329" height="200" border="0" />
+<img src="pcb_wiring/solderless_face.jpg" width="387" height="200" border="0" /><br />
+Images:  Opened controller that can be used without soldering; The membrane face used by the controller, the extra button (which is actually a resistor) circled
+</div>
+
+<p>
+Basically, all that is done in using one of these controllers is inserting stripped wire tips snugly into the terminal used by the membrane switches; this membrane has a path leading to the terminal for each function.  You need 22 to 26 AWG solid (not stranded) insulated wire, and the tips stripped about 3/16" for PS1 and PS2 PCBs; 24 AWG solid with thin insulation (like extracted from shielded wire) stripped about 3/32" is necessary for PS3.  The best wire for all solderless PCBs is extracted from 24AWG multiple solid cable.  Since some wire can be a bit thick when lined together, you may need to strip every other wire end a bit extra, or part every other wire, to make them fit.  You may want to keep the tip of the membrane inserted to make the fit more snug.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/solderless_start.jpg" width="257" height="300" border="0" />
+<img src="pcb_wiring/solderless_inserted.jpg" width="312" height="300" border="0" /><br />
+Images:  Starting inserts; Inserts finished and working
+</div>
+
+<p>
+You can cut the tip off the membrane when using a PS1 model, but you may need the membrane if you are using a PS2 or PS3 model.  The PS2 model has two more paths than the PS1 model; one path is a ground specific to the start, select, and analog buttons; the other path is for a resistor; the PS3 has another resistor and two more paths.  The PS2 or PS3 controller will engage most the buttons when it does not have the resistor(s) and ground in the membrane attached at the appropriate terminal slots; either the membrane or a 1K to 10K resistor for PS2, or 7.5K to 8.5K for PS3 (cannot use the membrane on the PS3 PCB when doing solderless), wrapped (staggered) around the bordering wires must be installed with the wires to function.  You may need to angle the membrane and wires so they make proper contact, so the added resistor will work much better.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/less_fin1.jpg" width="311" height="300" border="0" />
+<img src="pcb_wiring/less_fin2.jpg" width="349" height="300" border="0" /><br />
+Images:  PS1 PCB with wire wrapped to hold it in place; PS2 PCB with hot glue added to hold wires in place
+</div>
+
+<p>
+When finished inserting, you want to find a way to secure the wires so they will not fall out.  One way to do this is to use long wire (about 12" - 16") from the start, bunch the wires together, add some fastener to them, and loop them around the PCB.  Another way is using hot glue; be sure that all the wires are working where they are placed before doing this more permanent securing.  The glue is risky and I do not recommend it.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/ps3_solderless.jpg" width="410" height="300" border="0" /><br />
+Images:  PS3 PCB with thinly insulated 24 AWG solid wire and staggered 8.2K wrapped resistors
+</div>
+
+<p>
+As simple as this may sound, it can be very frustrating; wires slip out and do not like to fit sometimes; getting to the point where every wire is inserted properly can take a long time.  This process can be hit or miss; I much prefer soldering over doing this.  The wire can also warp the terminals so the membrane no longer works well with the PCB.  Solder makes things much more durable as well.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="PCB_DIAGRAMS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">PCB Diagrams</h2>
+
+<p>
+This subsection contains images with labels for many different PCBs.
+</p>
+
+<p>
+The labeled points are only suggestions as PCBs can be exploited in many different ways, especially when outside electronics components are involved.  Signals are circled in blue.  Main grounds are circled in red.  There is generally only one ground possible in each PCB; some newer PCBs make the illusion of multiple grounds by creating required interactions between parts of the processor; when a ground is not the actual ground, it is labeled common, which is short for common line, ie they have a common connection.  Commons function in the same way as grounds.  Different commons are labeled in different colors.  Some ground/commons may circle points that look empty; this suggests that the ground/common covers many areas and the spot can be scratched for an attachment point.
+</p>
+
+<p>
+The voltage points are circled in yellow with a corresponding number.  This is only important if you need an energy source for an analog joystick or LED, or maybe for multiple PCBs.  Actual voltage often depends on the system or converter in which the controller is plugged.
+</p>
+
+<p>
+Keep in mind that some controllers (like PS A controllers) may have the same model information and contain different PCBs.
+</p>
+
+<p>
+If this subsection does not have your controller, refer to the PCB mapping subsection or try to find a diagram elsewhere.  For some of the more simple PCBs, some simple electronics may suffice.  There are many more complex ways to use electronics which this site will not cover, but can be found elsewhere.
+</p>
+
+<ul>
+<li><a href="pcb_diagrams/dc_diagram1.jpg" target="_blank">Dreamcast HKT-7700 (Lags)</a></li>
+<li><a href="pcb_diagrams/gc_diagram1.jpg" target="_blank">Gamecube DOL-003</a></li>
+<li><a href="pcb_diagrams/gen_diagram1.jpg" target="_blank">Genesis 1650</a></li>
+<li><a href="pcb_diagrams/gen_diagram2.jpg" target="_blank">Genesis 1653</a></li>
+<li><a href="pcb_diagrams/nes_diagram1.jpg" target="_blank">NES-004</a></li>
+<li><a href="pcb_diagrams/nes_diagram2.jpg" target="_blank">NES-027 Max</a></li>
+<li><a href="pcb_diagrams/nes_diagram3.jpg" target="_blank">NES-039 Bone</a></li>
+<li><a href="pcb_diagrams/n64_diagram1.jpg" target="_blank">Nintendo 64 NUS-005</a></li>
+<li><a href="pcb_diagrams/pc_diagram1.jpg" target="_blank">PC Logitech Precision</a></li>
+<li><a href="pcb_diagrams/ps1_diagram1.jpg" target="_blank">Playstation 1 Digital H</a></li>
+<li><a href="pcb_diagrams/ps1_diagram4.jpg" target="_blank">Playstation 1 Digital M</a></li>
+<li><a href="pcb_diagrams/ps1_diagram3.jpg" target="_blank">Playstation 1 Digital Malaysia</a></li>
+<li><a href="pcb_diagrams/ps1_diagram2.jpg" target="_blank">Playstation 1 Digital Philippines</a></li>
+<li><a href="pcb_diagrams/ps1_diagram8.jpg" target="_blank">Playstation 1 Dual Shock A (Early Version</a></li>
+<li><a href="pcb_diagrams/ps1_diagram5.jpg" target="_blank">Playstation 1 Dual Shock A (Late Version)</a></li>
+<li><a href="pcb_diagrams/ps1_diagram7.jpg" target="_blank">Playstation 1 Dual Shock H (Early Version)</a></li>
+<li><a href="pcb_diagrams/ps1_diagram9.jpg" target="_blank">Playstation 1 Dual Shock H (Late Version)</a></li>
+<li><a href="pcb_diagrams/ps1_diagram6.jpg" target="_blank">Playstation 1 Dual Shock M (Rare)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram2.jpg" target="_blank">Playstation 2 Dual Shock A (Middle Version; Avoid)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram1.jpg" target="_blank">Playstation 2 Dual Shock A (Early Version with Resistor)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram6.jpg" target="_blank">Playstation 2 Dual Shock A (Early Version w/o Resistor; Avoid)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram7.jpg" target="_blank">Playstation 2 Dual Shock A (Late Version; Recommended)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram3.jpg" target="_blank">Playstation 2 Dual Shock H (Avoid)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram4.jpg" target="_blank">Playstation 2 Dual Shock M (Rare)</a></li>
+<li><a href="pcb_diagrams/ps2_diagram5.jpg" target="_blank">Playstation 2 Nubytech SF</a></li>
+<li>Playstation 3 Mad Catz Wired (omitted because the PCB has poor quality)</li>
+<li><a href="pcb_diagrams/ps3_diagram2.jpg" target="_blank">Playstation 3 Sixaxis</a></li>
+<li><a href="pcb_diagrams/ps3_diagram3.jpg" target="_blank">Playstation 3 Dual Shock</a></li>
+<li><a href="pcb_diagrams/sat_diagram1.jpg" target="_blank">Saturn MK-80100</a></li>
+<li><a href="pcb_diagrams/sat_diagram2.jpg" target="_blank">Saturn MK-80116</a></li>
+<li><a href="pcb_diagrams/snes_diagram2.jpg" target="_blank">Super NES SNS-005</a></li>
+<li><a href="pcb_diagrams/snes_diagram1.jpg" target="_blank">Super NES SNS-102</a></li>
+<li><a href="pcb_diagrams/tg_diagram1.jpg" target="_blank">Turbo Grafx Pad</a></li>
+<li><a href="pcb_diagrams/xbox_diagram2.jpg" target="_blank">Xbox L</a></li>
+<li><a href="pcb_diagrams/xbox_diagram4.jpg" target="_blank">Xbox S (Early Version)</a></li>
+<li><a href="pcb_diagrams/xbox_diagram3.jpg" target="_blank">Xbox S (Late Version)</a></li>
+<li><a href="pcb_diagrams/xbox_diagram1.jpg" target="_blank">Xbox Nubytech SF</a></li>
+<li><a href="pcb_diagrams/360_diagram2.jpg" target="_blank">Xbox 360 Mad Catz Arcade Stick (Late Version)</a></li>
+<li><a href="pcb_diagrams/360_diagram4.jpg" target="_blank">Xbox 360 Mad Catz 4716 Wired (Early Version)</a></li>
+<li><a href="pcb_diagrams/360_diagram3.jpg" target="_blank">Xbox 360 Mad Catz 4716 Wired (Late Version)</a></li>
+<li><a href="pcb_diagrams/360_diagram6.jpg" target="_blank">Xbox 360 Wired (Early Version)</a></li>
+<li><a href="pcb_diagrams/360_diagram1.jpg" target="_blank">Xbox 360 Wired (Late Version)</a></li>
+<li><a href="pcb_diagrams/360_diagram5.jpg" target="_blank">Xbox 360 Wireless (Early Version)</a></li>
+<li><a href="pcb_diagrams/360_diagram7.jpg" target="_blank">Xbox 360 Wireless (Late Version)</a></li>
+</ul>
+
+<hr style="color:#FF00FF" />
+
+<a name="WIRE" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Wire</h2>
+
+<p>
+The best wire for controller electronics will usually come with the description "hook-up" for it.  It is insulated and comes either stranded or solid in various thicknesses.
+</p>
+
+<p>
+Stranded wire is made up of multiple smaller threads of wire (similar to the fibers in string), while solid wire is one whole length of metal.  Which to use is a matter of preference, but most prefer stranded wire.  Stranded wire is much more flexible and prone to fraying, while solid wire retains its shape and does not fray.  Flexibility will make the wire less hard on solder points and easier to twist, but will make it more difficult to organize.  Fraying can make the wire more difficult to work and cause undesired contacts.  Stranded wire also tends to hold better in crimping terminals, and has more surface to bond with solder.  Plus you can tin stranded wire with solder to make it solid.
+</p>
+
+<p>
+Thicker wire will be less flexible and fray more, while thinner wire will be more flexible and fray less.  Wire thickness is rated usually according to AWG (American Wire Gauge); the higher the number, the thinner the wire.  Here are some measurements which exclude insulation (which can vary in thickness depending on how the manufacturer makes it):
+<ul>
+<li>18 AWG - .0403" / 1.024mm</li>
+<li>20 AWG - .0320" / 0.812mm</li>
+<li>22 AWG - .0253" / 0.644mm</li>
+<li>24 AWG - .0201" / 0.511mm</li>
+<li>26 AWG - .0159" / 0.405mm</li>
+<li>28 AWG - .0126" / 0.321mm</li>
+<li>30 AWG - .0100" / 0.255mm</li>
+</ul>
+</p>
+
+<p>
+For PCBs and devices, 20-26 AWG (I have come to like solid 24 AWG most) insulated wire has an appropriate thickness, works well with crimping (especially for .110" connection and chaining), and fits into a PCB well.  18 AWG wire is too large and rigid, and 28 AWG is often too fragile.  Color-coded connectors for 18-22 AWG wire will be red and not blue or yellow; 24 AWG wire and folded 26 AWG wire works for red connectors as well, but do have very small connectors coded yellow for them.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/outdoor.jpg" width="439" height="300" border="0" /><br />
+Image:  Various outdoor wires containing 8 to 50 individual, insulated, unattached 24 AWG wires
+</div>
+
+<p>
+Using different colors of insulated wire can make it easier to distinguish each wire in the mess that can likely develop.  Thinly insulated wire in many colors can be extracted from certain multiconductor cables like shielded and outdoor wiring and phone cable (and it can be much less expensive too).  Having just two colors, one for signals and one for grounds, can help a lot.  If you are going for a certain inside look, the variety of colors may not matter to you.  Modified computer cable (like ATA cable) can work too.
+</p>
+
+<p>
+Labeling tape around wires like little flags can help when putting the wiring together; there are flag products that specifically do this.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="TERMINALS_AND_CRIMPING" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Terminals and Crimping</h2>
+
+<p>
+Various terminals and connectors can be placed on the ends of wires.  Like solder, they attach wire to switch terminals on devices.  They can also be used in certain terminal blocks.  The only tool they require is a crimper.  Insulated terminals (which are usually color-coded) use oval-shaped areas on the crimper, while non-insulated terminals (which are usually bare) use U-shaped areas on the crimper.  Terminals also come single-barrel or double-barrel; double-barrel terminals crimp in two locations and are stronger.  Insulation can also come separate and removable; these forms of insulation are heat-shrink tubing, sleeves, housings, and boots.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/terminals.jpg" width="342" height="200" border="0" /><br />
+Image:  Terminals and connectors (left to right):  female quick disconnect, butt connector, spade (fork) terminal, ring terminal
+</div>
+
+<p>
+Terminal crimping may be preferred over soldering because it is quick, easy, and clean.  Soldering may be preferred because it requires no special pieces and is less bulky, and wire can slip out of crimped terminals.
+</p>
+
+<p>
+Crimping is a pretty easy process:
+<ul>
+<li>Cut the wire(s) to the needed length with maybe a little slack.</li>
+<li>Strip the end of the wire(s) for the needed length of bare wire (about 1/4" or 1/3") using the corresponding size of stripper.</li>
+<li>Insert the connector in and level to the crimper in the corresponding size, then the stripped end(s) into the connector (the bare wire can be folded against the base of the wire first for a more snug fit).</li>
+<li>Crimp the bulk of the terminal using the crimper.</li>
+</ul>
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/start.jpg" width="284" height="150" border="0" alt="Crimper, Wire, and Connectors" />
+<img src="pcb_wiring/cut-strip.jpg" width="279" height="150" border="0" alt="Cut and Stripped" />
+<img src="pcb_wiring/insert1.jpg" width="176" height="150" border="0" alt="Connector Inserted" />
+<img src="pcb_wiring/insert2.jpg" width="182" height="150" border="0" alt="Wire Inserted" />
+<img src="pcb_wiring/crimp.jpg" width="180" height="150" border="0" alt="Crimping" />
+<img src="pcb_wiring/crimped.jpg" width="135" height="150" border="0" alt="Crimped" /><br />
+Images:  Crimping process:  Start; Cut and stripped; Connector Inserted; Then wire inserted; Crimping; Crimped
+</div>
+
+<p>
+Standards microswitches fit .187” (3/16”) female quick disconnects.  This size is used on all Sanwa, Seimitsu, and Happ joysticks (without wire harnesses) and buttons with a standard microswitch attached.  Some joysticks have .250" (1/4") terminals.  Note also that quick disconnects have thickness ratings, usually about .02" or .032" (about .5mm or 1mm); get the smaller thickness or it will likely not hold the terminal.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/sets.jpg" width="523" height="300" border="0" /><br />
+Image:  .110" female quick disconnect on and by Sanwa button, .187" female quick disconnect on and by Seimitsu joystick and Happ button, .250" female quick disconnect on and by IL Eurojoystick
+</div>
+
+<p>
+Most buttons not attached to standard microswitches use .110” female quick disconnects.  These are mainly for Sanwa and Seimitsu buttons.  Larger quick disconnects can fit on these terminals, but they are less secure.  The problem with .110” quick disconnects is most hardware stores do not carry them, so you probably have to order them online.  If you are making an order for Sanwa or Seimitsu buttons, check to see if they also sell these quick disconnects so you can save time and money getting them with your other parts.
+</p>
+
+<p>
+Two connects are needed for each button, and eight are needed for each joystick that does not use a wire harness.
+</p>
+
+<p>
+Terminals such as quick disconnects can also be soldered to wire; I tend to prefer soldering wire to terminals because it is about a 100% joint.  Noninsulated, single-barrel terminals are usually best for simple soldering.  But both soldering and crimping can be done.  The wire can be tinned with a lot of solder, inserted, crimped, then heated so the solder bonds inside; this is a very strong joint.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="TWISTING" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Twisting</h2>
+
+<p>
+The other option to device switch connections is simple wire twisting.  It is not as strong as soldering or crimping.  Twisting also requires a wire cutter and stripper.  It needs thin and well-stripped wire, with stranded (not solid) wire working much better.  Wrap the wire end(s) through and around the hole in the switch terminal.
+</p>
+
+<p>
+But twisting also has its use in conjunction with crimping and soldering.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="SPLICING_AND_CHAINING" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Splicing and Chaining</h2>
+
+<p>
+Splicing involves adding two wire ends to one side of a connection.  The main use for this is spreading the ground around to different devices.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/cut-strip2.jpg" width="258" height="150" border="0" alt="Wire Cut and Stripped with Connector" />
+<img src="pcb_wiring/insert3.jpg" width="104" height="150" border="0" alt="Connector Inserted" />
+<img src="pcb_wiring/crimp2.jpg" width="137" height="150" border="0" alt="Two Inserted Wires Crimping" />
+<img src="pcb_wiring/chain.jpg" width="199" height="150" border="0" alt="Chain" /><br />
+Images:  Chain crimping:  New stripped wire and connector; Connector inserted; Two wires inserted; Crimped and chain made
+</div>
+
+<p>
+When more than one device uses a ground, it can be distributed by chaining it to all the devices that need it.  Regardless of connection, the two wires being spliced can be twisted together before being connected.  With a crimping terminal, both wires are inserted and crimped into the same terminal.  With soldering, they are both soldered in the same spot.  With twisting, they are just twisted together around the switch terminal.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/cut-strip3.jpg" width="259" height="150" border="0" alt="New Wires and Butt Connector" />
+<img src="pcb_wiring/insert4.jpg" width="179" height="150" border="0" alt="Two Wires Crimped Into One Side" />
+<img src="pcb_wiring/insert5.jpg" width="110" height="150" border="0" alt="One Wire Into Other Side" />
+<img src="pcb_wiring/finish.jpg" width="240" height="150" border="0" alt="Splice" /><br />
+Images:  Butt splicing:  Butt connector and two new wires; Two wires crimped in one side; One wire in the other; Splice made
+</div>
+
+<p>
+Splicing can also be done using a terminal strip.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="JOYSTICK_CONNECTION" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Joystick Connection</h2>
+
+<p>
+Most joysticks have each of their four switches open, each needing a ground and a signal.  If the ground is universal, it can be chained to all four.  If some have unique grounds (commons), corresponding commons need to be attached.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/joy_wire.jpg" width="365" height="300" border="0" /><br />
+Image:  Joystick with a wire harness
+</div>
+
+<p>
+Other joysticks have a built-in PCB and a wire harness.  These wires just need to be linked to a single ground and each corresponding signal.  However, this is a problem if some directions have unique grounds (commons).  When the wrong common makes contact with a direction, it can engage other commands, or make the PCB generally malfunction.  Besides avoiding multiple-common PCBs, there are various ways to deal with a joystick in this situation:
+</p>
+
+<p>
+One way is to see if the different commons just require different resistance.  In this case resistors can just be added.  This is rarely the case though.
+</p>
+
+<p>
+Another way established by Toodles is to use integrated circuits like the 74HC4066N and inverter chips to sort the commons.  This can be complicated, and you way want to look into how these work or find someone (like maybe Toodles) to make it easier.
+</p>
+
+<p>
+The most direct way to counter this problem is by partly bypassing the wire harness.  You can cut contact between the joystick switches, the PCB, and/or the wire harness for different commons.  You can do this by cutting contact between the switch ground terminals and the PCB, or by carving away small parts of the paths on the PCB, and connecting common wires directly to the ground terminals on the switches.  For example, some X-Box 360 wired PCBs have three different commons on the directional pad, one for up and down, and the other two for left and right; ground circuits could be cut for left and right and each switch could get its common wire attached directly, and the wire harness could be used normally for the remaining connections.
+</p>
+
+<p>
+The other way to fix this is to change the joystick into an open-terminal version.  Standard microswitches from various manufacturers can replace the PCB version without changing the height of the joystick (even for the JLF); if the joystick uses levered switches, you may need the corrent model of microswitch.  You can also just cut away the PCB and use the remaining switches and their bent terminals.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="TERMINAL_STRIPS_AND_ORGANIZATION" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Terminal Strips and Organization</h2>
+
+<p>
+Many arcade controller builders feed the wires from the extract PCB to barrier and/or jumper strips (also called terminal blocks).  This makes it so the lengths of the wires attached to the PCB can be uniform and non-specific, and the signals and wires can be much more organized, and the PCB can be modified more easily.  The strip can also be used for duplicating or converging signals (multiple wires can use the same terminal strip point); this is useful in make some switches do the same thing or making a controller use more than one PCB.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/block.jpg" width="356" height="250" border="0" />
+<img src="pcb_wiring/euro.jpg" width="340" height="250" border="0" /><br />
+Images:  Barrier strip with a jumper strip (which can be trimmed) connecting three sets, and some terminals; European-style terminal strip with some stripped wire tips secured
+</div>
+
+<p>
+Spade and ring terminals fit wire ends from the PCB and switches into standard terminal strips.  Spade terminals can slide under screws for easy movement, but are held with just friction.  Ring terminals have to be installed and removed with the entire screw, but hold very strongly.
+</p>
+
+<p>
+European-style terminal strips only require wire ends stripped about 1/8" to 1/4" to be secured.  The ends get wedged down by screws.  I tend to prefer European-style strips because they are easier and do not require connectors.  And European-style strips can be trimmed down using a saw.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/extracted_setup.png" width="652" height="416" border="0" /><br />
+Image:  Bottom view example setup for an extracted PCB
+</div>
+
+<p>
+With the ground(s) and various signal wires attached to the PCB, link them to the proper button and joystick switches.  Each switch needs a signal and a ground.  Use some splicing and chaining to distribute the ground(s).  Use various wire mounts for better organization.
+</p>
+
+<p>
+With the wiring set, thread the cord out, or position the remote at, a groove or hole in the front of the controller box.  Perhaps tie the cord in a knot or attach some kind of bulk at the area just before the cord exits the box to prevent potential yanking from damaging the insides of the controller.  Or instead of this cut the cord about where it meets the side of the box and install a D-sub or USB connector to make the cord more independent of the controller.
+</p>
+
+<p>
+It should also be noted that some controllers are made with all the devices wired directly to a D-sub connector.  The connector is then attached to an outside project box with the other side of the connector connected to the various points on an enclosed PCB.  This makes a controller PCB-independent, but also makes it much more bulky.
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="CUSTOM_PCBS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Custom PCBs</h2>
+
+<p>
+A specially made PCB specifically for a custom controller can cost a little more and is generally made for PCs with more expensive converters available.  But it can save a lot of time, is much more simple, and does not require soldering.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/designed_pcbs.jpg" width="591" height="400" border="0" /><br />
+Image:  Left to right:  KeyWiz-ST (its cord too), X-Arcade PCB, I-PAC VE
+</div>
+
+<p>
+There currently are not many choices in custom PCBs.
+</p>
+
+<p>
+Ultimarc (based in Japan) produces the I-PAC and other variations of it.  It has terminal strips (European-style) built into the PCB.  It also has software to alter the button settings.  It comes based for PC, but converters are available from them.  (<a href="http://www.ultimarc.com/" target="_blank">link</a>)
+</p>
+
+<p>
+Groovy Game Gear (based in the US) produces the Key-Wiz and other variations of it.  These PCBs are very similar to the Ultimarc versions.  (<a href="http://groovygamegear.com/webstore/" target="_blank">link</a>)
+</p>
+
+<p>
+Using the I-PAC or Key-Wiz is very simple.  Strip about 1/4" or 1/3" off the end of the wire connected to the switch, feed it into the desired signal, and wedge it down securely with the screw.  Each switch needs the proper signal and the ground.  Use some splicing and chaining to distribute the ground.  Use various wire mounts for better organization.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/custom_setup.png" width="652" height="416" border="0" /><br />
+Image:  Bottom view example setup for a custom PCB
+</div>
+
+<p>
+Another option is the Universal PCB produced by Toodles.  This is about as versatile as a PCB can get.  It can be used on many systems, requiring mainly the plug head on a system's cord and some wiring.  It needs instruction (which is given), some work, and some soldering equipment to utilize.  Toodles has also begun to make simpler PCBs that work for common consoles; these are great for those not wanting to deal with soldering.  (<a href="http://forums.shoryuken.com/showthread.php?t=131230" target="_blank">link</a>)
+</p>
+
+<p>
+X-Arcade sells the PCB used in their controller alone, though a bit expensive.  Avoid this PCB because it lags at lot.  It comes with ready-made wiring using only .187" terminals.  (<a href="http://www.xgaming.com/byoarcade.shtml" target="_blank">link</a>)
+</p>
+
+<hr style="color:#FF00FF" />
+
+<a name="MULTIPLE_PCBS" />
+
+<h2 style="font-family:arial,verdana,helvetica,georgia,times new roman,new courier;font-size:20">Multiple PCBs</h2>
+
+<p>
+Multiple PCBs can be used in the same controller, but problems can occur in doing so.  There are a couple ways to do it.  One involves project boxes with D-sub connectors that sit outside the controller, and the other involves splicing multiple PCBs within the controller to complementary signals and grounds (commons).
+</p>
+
+<p>
+A D-sub is basically a plug that continues different wires.  When using one with a PCB sitting in a project box outside the controller, the insides of the controller are sorted to the D-sub connector so that no PCB sits inside the controller and it is PCB independent.  Outside the controller, each of these wires lead to the other side of the D-sub, which leads to wires connected to the desired locations on the PCB.  Basically, an external project box is the same as a PCB inside the controller, but the different wires go through a connector which leads to the PCB outside the box.  Different project boxes can then be made to use different PCBs for the same controller.
+</p>
+
+<div style="font-size:10" align="center">
+<img src="pcb_wiring/multiple.jpg" width="398" height="350" border="0" /><br />
+Image:  PS1 DS H (early version) linked to Xbox 360 Madcatz 4716 (late version) by branching Xbox 360 main signals and grounds to the PS1 test points of similar locations, the Xbox 360 5V to the PS1 3.3V, and setting device switch wires on the PS1 button locations (the PCBs can be folded together so they are more compact)
+</div>
+
+<p>
+The other multiple PCB method is housing multiple PCBs inside a single controller.  Complementary signals and grounds (commons) for each PCB are in some way or another sorted to the same terminals on each joystick and button switch.  They can converge at different points.  They could meet on the switch terminals, but I do not recommend this.  A good way is to link one PCB directly to another PCB in the complementary locations.  Another good way is to have them converge in the same terminal strip.  They will then have the same circuits completing on each PCB.  Be careful that the ground (commons) and signals are sorted properly to avoid engaged switches.
+</p>
+
+<p>
+PCBs linked to each other need to have their ground and voltage connected.  It is necessary because a PCB, or more specifically an integrated circuit, needs to have power connections to function properly.  If a linked PCB does not have power for the integrated circuit, it will cross signals and cause the other PCB to make strange connections.  I have personally tried working without power in one of the PCBs and it causes strange things to occur.
+</p>
+
+<p>
+But, as with joysticks using wire harnesses, the biggest problem for multiple PCBs has to do with multiple commons in individual PCBs.  Again, if the wrong common makes contact with a signal, adverse commands often occur.
+</p>
+
+<p>
+Multiple commons is not so much a problem for project boxes; they can be sorted decently with some planning.  But for multiple internal PCBs, this can make the PCB with the multiple commons malfunction.  Imagine one PCB has a single ground while the other has two commons; the single ground and one of the multiple commons are sorted to their various switches, which is not yet a problem; but then the same ground is sorted with the second common to the other switches; because all the wires from the single-ground PCB are linked (either with one another or through the PCB structure), and because the first common on the two-common PCB touches the single ground, the first common will get linked to the second common causing the commons to combine and create problems.
+</p>
+
+<p>
+Generally, it is recommended that PCBs using a single common are used when configuring multiple PCBs.  Currently the most popular of these configurations is a PS1 PCB mixed with a Mad Catz Xbox 360 (late version) PCB because each PCB has a single common.  This problem can be countered using either diodes or integrated circuits that sort and separate the commons, but this is not likely going to be worth the effort.  Keep in mind that there are converters available too.  Toodles is also making PCBs that make doing multiple PCBs easier.
+</p>
+
+</div>
+
+<!-- Bottom divider sharing color of navigation box. -->
+<div style="border-width:2;border-style:solid;border-color:black;background-color:#FF00FF"><p></p></div>
+
+<!-- Simple bottom navigation. -->
+</p>
+<a href="decoration.html"><img src="nav/next.png" hspace=25 vspace=0 align="right" border="0" alt="Next" /></a>
+<a href="box.html"><img src="nav/back.png" hspace=25 vspace=0 align="left" border="0" alt="Back" /></a>
+<div style="font-size:10" align="center"><a href="../index.html"><img src="../slagcoin/sc_small.png" align="center" width="64" height="25" border="0" /></a> <br /> &copy 2008-2009 slagcoin</div>
+</p>
+
+<br />
+
+</div>
+
+</table>
+
+</body>
+
+</html>
